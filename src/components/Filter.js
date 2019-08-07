@@ -60,7 +60,7 @@ const Filter = props => {
   return (
     <Form id="myForm" onSubmit={search}>
       <Form.Group controlId="formBasicEmail">
-        <Form.Label><strong>Nazwa obiektu</strong></Form.Label>
+        <Form.Label className="label">Nazwa obiektu</Form.Label>
         <Form.Control
           type="text"
           placeholder="Nazwa obiektu"
@@ -73,7 +73,7 @@ const Filter = props => {
         </Form.Text>
       </Form.Group>
       <Form.Group controlId="formBasicEmail1">
-        <Form.Label><strong>Nazwa miejscowości</strong></Form.Label>
+        <Form.Label className="label">Nazwa miejscowości</Form.Label>
         <Form.Control
           type="text"
           placeholder="Nazwa miejscowości"
@@ -85,7 +85,7 @@ const Filter = props => {
           Tutaj wpisz nazwę miejscowości
         </Form.Text>
       </Form.Group>
-      <Form.Label><strong>Data Przyjazdu</strong></Form.Label>
+      <Form.Label className="label">Data Przyjazdu</Form.Label>
       <Form.Row>
         <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
           <Form.Control as="select" onChange={updateDay}>
@@ -151,7 +151,7 @@ const Filter = props => {
         </Form.Group>
       </Form.Row>
       <Form.Group controlId="formBasicPassword">
-        <Form.Label><strong>Długość pobytu</strong></Form.Label>
+        <Form.Label className="label">Długość pobytu</Form.Label>
         <Form.Control as="select" onChange={updateInterval}>
           <option>1</option>
           <option>2</option>
@@ -165,12 +165,12 @@ const Filter = props => {
       </Form.Group>
       <Form.Row>
         <Form.Group as={Col}>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" className = "button">
             Szukaj
           </Button>
         </Form.Group>
         <Form.Group as={Col}>
-          <Button variant="primary" onClick={clear}>
+          <Button variant="danger" onClick={clear} className = "button">
             Wyczyść
           </Button>
         </Form.Group>

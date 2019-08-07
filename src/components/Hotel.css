@@ -4,10 +4,20 @@
     padding: 10px;
 }
 .row_hotel{
+    position: relative;
     transition: background-color .3s ease-in-out;
     border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
-.row_hotel:hover{
+.container_hotel:hover{
     background-color: rgba(106, 206, 89, 0.616);
     cursor: pointer;
 }
+.container_hotel{
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+/* .hotel_column{
+    border: 1px solid black;
+    height: 100%;
+} */
