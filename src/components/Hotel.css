@@ -1,0 +1,13 @@
+.record{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+}
+.row_hotel{
+    transition: background-color .3s ease-in-out;
+    border-radius: 10px;
+}
+.row_hotel:hover{
+    background-color: rgba(106, 206, 89, 0.616);
+    cursor: pointer;
+}

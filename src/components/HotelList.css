@@ -1,0 +1,8 @@
+.data_field {
+  border-radius: 10px;
+}
+.filter_jumbotron, .data_field, .statistic_jumbotron {
+    background: rgb(248, 248, 248);
+}
+
+/*#bc00c2*/
