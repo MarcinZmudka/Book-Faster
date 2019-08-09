@@ -7,8 +7,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Description from "./Description";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import "./HotelList.css";
+import "./css/HotelList.css";
 import Sorter from "./Sorter";
+import UserHotel from "./UserHotel";
 
 class HotelList extends React.Component {
   constructor(props) {
@@ -122,7 +123,7 @@ class HotelList extends React.Component {
         <Row className="">
           <Col lg={3} className="m-0">
             <Jumbotron className="filter_jumbotron py-3">
-              <Filter hotels = {this.props.hotel} setHotels = {this.setDisplayed} />
+              <Filter hotels = {this.props.hotel} setHotels = {this.setDisplayed} user = {this.props.userHotel} userHotel = {UserHotel.setUser}/>
             </Jumbotron>
             <Jumbotron className="statistic_jumbotron py-3">
               {this.state.displayedHotels ? (
@@ -139,6 +140,9 @@ class HotelList extends React.Component {
             </Jumbotron>
           </Col>
           <Col lg={9}>
+            <Jumbotron>
+              <UserHotel />
+            </Jumbotron>
             <Jumbotron className="m-0 p-1 data_field">
               <Description sort={this.sort} />
               {this.state.displayedHotels
@@ -156,4 +160,5 @@ class HotelList extends React.Component {
     );
   }
 }
+
 export default HotelList;

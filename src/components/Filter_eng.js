@@ -1,12 +1,17 @@
 let hotels = "";
-const Filter_engine = (hotel, requirements) =>{
+const Filter_engine = (user, hotel, requirements) =>{
     hotels = hotel;
-    return selectByName(hotels, requirements);
+    const selectedHotels = findUser(selectByName(hotels, requirements), user);
+    return selectedHotels;
 }
 export default Filter_engine;
 
+const findUser = (selected, user) => {
+  let displayHotels = selected.filter(item => item.name != user);
+  let displayUser = selected.filter(item => item.name.trim() == user);
+  return [displayHotels, displayUser];
+}
 const selectByName = (hotels, requirements) => {
-    console.log("nazwa", requirements[0]);
     let selected =
       requirements[0] === ""
         ? null
@@ -53,11 +58,9 @@ const selectByDate = (preselect, requirements, i) => {
     let selected = null;
     if (preselect === null && requirements[i] === "") {
       // nie ma wcześniejszych wymagań ani obecnych
-      console.log("if1");
       selected = null;
     } else if (preselect === null && requirements[i] !== "") {
       // nie ma wcześniejszych śą obecne
-        console.log("if2");
         selected = hotels.filter(
         item => item.arrival === requirements[i]
       );
@@ -68,7 +71,6 @@ const selectByDate = (preselect, requirements, i) => {
       // są wcześniejsze są obecne
       selected = preselect.filter(item => item.arrival === requirements[1]);
     }
-    console.log("select by date", selected);
     return selectByInterval(selected, requirements, ++i);
   };
 

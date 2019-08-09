@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { HotelProvider } from "./content/HotelContext";
 import { UserHotelProvider } from "./content/UserHotelContext";
+import { UserHotelStatsProvider } from "./content/UserHotelStatsContext";
 import CompareContext from "./components/CompareContext";
 import Navi from "./components/Navi";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -17,7 +18,9 @@ function App() {
           <UserHotelProvider>
             <Switch>
               <Route path="/option" component={Option} />
-              <Route path="/compare" component={CompareContext} />
+              <UserHotelStatsProvider>
+                <Route path="/compare" component={CompareContext} />  
+              </UserHotelStatsProvider>
               <Route path="/" exact component={MainPage} />
             </Switch>
           </UserHotelProvider>

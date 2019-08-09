@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
-import "./Filter.css";
+import "./css/Filter.css";
 import Filter_engine from './Filter_eng';
+import { UserHotelStatsContext } from "../content/UserHotelStatsContext";
 
 const Filter = props => {
   const [name, setName] = useState("");
@@ -12,6 +13,7 @@ const Filter = props => {
   const [year, setYear] = useState("");
   const [interval, setInterval] = useState("");
   const [place, setPlace] = useState("");
+  const [userHotelStats, setUserHotelStats] = useContext(UserHotelStatsContext);
 
   const updateName = event => {
     const name = event.target.value;
@@ -39,11 +41,12 @@ const Filter = props => {
   };
   const search = event => {
     event.preventDefault();
-    console.log(year, month, day);
     //const date = new Date(year, month-1, day);
     const date = day === "" ? "" : `${day}-${month}-${year}`;
-    const displayedHotels = Filter_engine(props.hotels,[name, place, date, interval]);
-    props.setHotels(displayedHotels);
+    const displayedHotels = Filter_engine(props.user, props.hotels,[name, place, date, interval]);
+    props.setHotels(displayedHotels[0]);
+    console.log("set");
+    setUserHotelStats(displayedHotels[1]);
   };
   const clear = event => {
     event.preventDefault();
