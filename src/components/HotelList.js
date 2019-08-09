@@ -1,5 +1,4 @@
 import React from "react";
-import { HotelContext } from "../content/HotelContext";
 import Hotel from "./Hotel";
 import Filter from "./Filter";
 import Statistic from "./Statistics";
@@ -14,9 +13,10 @@ import Sorter from "./Sorter";
 class HotelList extends React.Component {
   constructor(props) {
     super(props);
+    const hotels = props.hotel;
+    console.log(this.props.userHotel);
     this.state = {
-      hotels: "",
-      displayedHotels: "",
+      displayedHotels: hotels,
       averagePrice: 0,
       numberOfHotels: 0,
       minPrice: 0,
@@ -24,7 +24,7 @@ class HotelList extends React.Component {
       pricePerNight: 0
     };
   }
-  static contextType = HotelContext;
+
   setDisplayed = ( displayed) => {
     let newState = this.state;
     newState.displayedHotels = displayed;
@@ -108,9 +108,6 @@ class HotelList extends React.Component {
     }
   };
   componentDidMount() {
-    let context = this.context[0];
-    this.setState(prevState => (prevState.hotels = context));
-    this.setState(prevState => (prevState.displayedHotels = context));
     setTimeout(() => {
       this.updateAveragePrice();
       this.updateMaxPrice();
@@ -125,7 +122,7 @@ class HotelList extends React.Component {
         <Row className="">
           <Col lg={3} className="m-0">
             <Jumbotron className="filter_jumbotron py-3">
-              <Filter hotels = {this.state.hotels} setHotels = {this.setDisplayed} />
+              <Filter hotels = {this.props.hotel} setHotels = {this.setDisplayed} />
             </Jumbotron>
             <Jumbotron className="statistic_jumbotron py-3">
               {this.state.displayedHotels ? (

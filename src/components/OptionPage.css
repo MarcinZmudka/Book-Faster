@@ -1,0 +1,15 @@
+#myForm{
+    font-size: 1.5em;
+}
+.label{
+    font-family: 'Roboto Slab', serif;
+}
+.underName{
+    font-size: 1rem;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+.button{
+    width: 10rem;
+    font-family: 'Open Sans', sans-serif;
+}
