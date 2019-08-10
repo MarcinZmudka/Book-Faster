@@ -140,9 +140,7 @@ class HotelList extends React.Component {
             </Jumbotron>
           </Col>
           <Col lg={9}>
-            <Jumbotron>
-              <UserHotel />
-            </Jumbotron>
+            <UserHotel />
             <Jumbotron className="m-0 p-1 data_field">
               <Description sort={this.sort} />
               {this.state.displayedHotels

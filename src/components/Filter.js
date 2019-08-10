@@ -43,9 +43,8 @@ const Filter = props => {
     event.preventDefault();
     //const date = new Date(year, month-1, day);
     const date = day === "" ? "" : `${day}-${month}-${year}`;
-    const displayedHotels = Filter_engine(props.user, props.hotels,[name, place, date, interval]);
+    const displayedHotels = Filter_engine(props.user, props.hotels, [name, place, date, interval]);
     props.setHotels(displayedHotels[0]);
-    console.log("set");
     setUserHotelStats(displayedHotels[1]);
   };
   const clear = event => {
@@ -59,6 +58,7 @@ const Filter = props => {
     document.getElementById("myForm").reset();
     const hotels = props.hotels;
     props.setHotels(hotels);
+    setUserHotelStats("");
   };
   return (
     <Form id="myForm" onSubmit={search}>

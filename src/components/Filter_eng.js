@@ -7,7 +7,7 @@ const Filter_engine = (user, hotel, requirements) =>{
 export default Filter_engine;
 
 const findUser = (selected, user) => {
-  let displayHotels = selected.filter(item => item.name != user);
+  let displayHotels = selected.filter(item => item.name.trim() != user);
   let displayUser = selected.filter(item => item.name.trim() == user);
   return [displayHotels, displayUser];
 }
