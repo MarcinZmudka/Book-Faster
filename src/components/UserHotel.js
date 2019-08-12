@@ -13,7 +13,7 @@ const jumboStyle2 = {
     display : "block",
 }
 const UserHotel = () => {
-    const [ userHotelStats, setUserHotelStats] = useContext(UserHotelStatsContext);
+    const [ userHotelStats ] = useContext(UserHotelStatsContext);
 
     console.log(userHotelStats[0]);
         return (

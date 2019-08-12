@@ -6,7 +6,7 @@ import "./css/Description.css";
 import { UserHotelStatsContext } from "../content/UserHotelStatsContext";
 
 const Description = (props) => {
-  const [ userHotelStats, setUserHotelStats] = useContext(UserHotelStatsContext);
+  const [ userHotelStats] = useContext(UserHotelStatsContext);
   const userHotelExist = () => userHotelStats.length > 0 ? true : false;
   const whatToShow = () => {
     if(userHotelExist()){

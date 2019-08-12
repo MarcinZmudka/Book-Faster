@@ -10,26 +10,29 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import "./css/HotelList.css";
 import Sorter from "./Sorter";
 import UserHotel from "./UserHotel";
+import Pages from './Pagination';
 
 class HotelList extends React.Component {
   constructor(props) {
     super(props);
     const hotels = props.hotel;
-    console.log(this.props.userHotel);
+    console.log(hotels.length);
     this.state = {
       displayedHotels: hotels,
       averagePrice: 0,
       numberOfHotels: 0,
       minPrice: 0,
       maxPrice: 0,
-      pricePerNight: 0
+      pricePerNight: 0,
+      currentPage: 1,
+      indexOfFirst: 0,
+      indexOfLast: 10,
     };
   }
 
   setDisplayed = ( displayed) => {
     let newState = this.state;
     newState.displayedHotels = displayed;
-    console.log("setDisplayed", displayed);
     this.setState(newState);
     this.updateStatistics();
   }
@@ -41,6 +44,14 @@ class HotelList extends React.Component {
       this.updateNumberOfHotels();
       this.updatePricePerNigth();
     }, 100);
+  }
+  changePage = (indexOfFirst, indexOfLast, currentPage) => {
+    let newState = this.state;
+    console.log(indexOfFirst, indexOfLast, currentPage);
+    newState.currentPage = currentPage;
+    newState.indexOfFirst = indexOfFirst;
+    newState.indexOfLast = indexOfLast;
+    this.setState(newState);
   }
   sort = type => {
     const newDisplayed = Sorter(type, this.state.displayedHotels);
@@ -119,7 +130,7 @@ class HotelList extends React.Component {
   }
   render() {
     return (
-      <Container fluid>
+      <Container fluid className="mt-3">
         <Row className="">
           <Col lg={3} className="m-0">
             <Jumbotron className="filter_jumbotron py-3">
@@ -144,7 +155,7 @@ class HotelList extends React.Component {
             <Jumbotron className="m-0 p-1 data_field">
               <Description sort={this.sort} />
               {this.state.displayedHotels
-                ? this.state.displayedHotels.map(item => {
+                ? this.state.displayedHotels.slice(this.state.indexOfFirst,this.state.indexOfLast).map(item => {
                     return <Hotel value={item} key={item.id} />;
                   })
                 : ""}
@@ -152,6 +163,7 @@ class HotelList extends React.Component {
                 ? "Nie znaleziony obiektów spełniających podane kryteria"
                 : ""}
             </Jumbotron>
+            <Pages numberOfHotels = {this.state.displayedHotels.length} hotelPerPage = {10} changePage = {this.changePage} currentPage ={this.state.currentPage}/>
           </Col>
         </Row>
       </Container>

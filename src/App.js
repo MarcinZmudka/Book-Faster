@@ -17,11 +17,12 @@ function App() {
         <HotelProvider>
           <UserHotelProvider>
             <Switch>
+              <Route path="/" exact component={MainPage} />
               <Route path="/option" component={Option} />
               <UserHotelStatsProvider>
                 <Route path="/compare" component={CompareContext} />  
               </UserHotelStatsProvider>
-              <Route path="/" exact component={MainPage} />
+              
             </Switch>
           </UserHotelProvider>
         </HotelProvider>

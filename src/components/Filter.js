@@ -13,7 +13,7 @@ const Filter = props => {
   const [year, setYear] = useState("");
   const [interval, setInterval] = useState("");
   const [place, setPlace] = useState("");
-  const [userHotelStats, setUserHotelStats] = useContext(UserHotelStatsContext);
+  const [ userHotelStats , setUserHotelStats] = useContext(UserHotelStatsContext);
 
   const updateName = event => {
     const name = event.target.value;

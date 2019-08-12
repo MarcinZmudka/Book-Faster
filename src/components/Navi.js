@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 
 const Navi = () => {
   return (
-    <Navbar expand="lg" className="mb-3 navbar">
+    <Navbar expand="lg" className="m-0 navbar">
       <Navbar.Brand href="/" className="title">
         Book-Faster
       </Navbar.Brand>

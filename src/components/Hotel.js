@@ -6,9 +6,9 @@ import Col from 'react-bootstrap/Col';
 import { UserHotelStatsContext } from '../content/UserHotelStatsContext';
 
 const Hotel = (props) => {
-    const [ userHotelStats, setUserHotelStats] = useContext(UserHotelStatsContext);
+    const [ userHotelStats ] = useContext(UserHotelStatsContext);
     const userHotelExist = () => userHotelStats.length > 0 ? true : false;
-    const whatToShow = () => userHotelExist() ? props.value.price - userHotelStats[0].price : props.value.price;
+    const whatToShow = () => userHotelExist() ? (props.value.price - userHotelStats[0].price) : props.value.depart;
     const priceStyleBigger = {
         color: "red",
     }
