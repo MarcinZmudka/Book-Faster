@@ -4,6 +4,12 @@
     border-bottom: 2px solid black;
     font-family: 'Roboto Slab', serif;
 }
+@media (max-width: 600px){
+    .titles{
+        display: flex;
+        justify-content: center;
+    }
+}
 .desc_title{
     transition: transform .5s ease-in-out;
     position: relative;
@@ -25,6 +31,7 @@
     visibility: visible;
     opacity:1;
 }
+
 /* .desc_title::after{
     content: '';
     position: absolute;

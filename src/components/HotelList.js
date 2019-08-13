@@ -16,7 +16,6 @@ class HotelList extends React.Component {
   constructor(props) {
     super(props);
     const hotels = props.hotel;
-    console.log(hotels.length);
     this.state = {
       displayedHotels: hotels,
       averagePrice: 0,
@@ -33,6 +32,9 @@ class HotelList extends React.Component {
   setDisplayed = ( displayed) => {
     let newState = this.state;
     newState.displayedHotels = displayed;
+    newState.currentPage = 1;
+    newState.indexOfFirst = 0;
+    newState.indexOfLast = 10;
     this.setState(newState);
     this.updateStatistics();
   }
@@ -47,7 +49,6 @@ class HotelList extends React.Component {
   }
   changePage = (indexOfFirst, indexOfLast, currentPage) => {
     let newState = this.state;
-    console.log(indexOfFirst, indexOfLast, currentPage);
     newState.currentPage = currentPage;
     newState.indexOfFirst = indexOfFirst;
     newState.indexOfLast = indexOfLast;

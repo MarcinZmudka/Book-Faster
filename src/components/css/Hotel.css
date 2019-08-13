@@ -10,7 +10,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 .container_hotel:hover{
-    background-color: rgba(106, 206, 89, 0.616);
+    background-color: #2a50ce62;
     cursor: pointer;
 }
 .container_hotel{

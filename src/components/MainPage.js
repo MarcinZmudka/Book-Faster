@@ -7,15 +7,17 @@ import dane1 from "./images/dane1.png";
 import dane from "./images/dane.png";
 import wyszukiwarka from "./images/wyszukiwarka.png";
 import statystyki from "./images/statystyki.png";
+import booking from "./images/booking.png";
+
 const MainPage = () => {
   return (
     <div>
       <div className="skos1" />
       <Container fluid className="m-0 p-0">
         <Row className="przedstawienie m-0 ">
-        <p className = "triangle"></p>
+          <p className="triangle" />
           <Col className="obraz pt-5">
-            <img src={dane} alt=""/>
+            <img src={dane} alt="" className = "foto"/>
           </Col>
           <Col className="text pt-5">
             <div className="box-text">
@@ -31,24 +33,52 @@ const MainPage = () => {
         </Row>
       </Container>
       <Container fluid>
-        <Row className = "skos2">
-          <Col>
+        <Row className="skos2">
+          <Col md={3}>
             <div className="text-stat">Przeglądaj statystyki</div>
-            <img src={dane1} alt="" className="stats"/>
+            <div className="subText">
+              Sprawdź czy twój obiekt jest tańszy czy droższy w danym terminie
+              oraz ilość dostępnych obiektów
+            </div>
+          </Col>
+          <Col md={9}>
+            <img src={dane1} alt="" className="stats foto" />
           </Col>
         </Row>
-        <Row className = "skos3">
-        <p className = "triangle2"></p>
-          <Col md={2} />
-          <Col md={4}>
-            <div className="text-stat">Wyszukuj według kryteriów</div>
-            <img src={wyszukiwarka} alt=""/>
+        <Row className="skos3">
+          <p className="triangle2" />
+          <Col md={3} className="wyszukiwarka-text">
+            <div>
+              <div className="text-stat">Wyszukuj według kryteriów</div>
+              <div className="subText">
+                Wyszukuj po nazwie, miejscowości, dacie, długości pobytu.
+              </div>
+            </div>
           </Col>
-          <Col md={4}>
-            <div className="text-stat">Porównuj otrzymane wyniki</div>
-            <img src={statystyki} alt=""/>
+          <Col className={"wyszukiwarka"} md={3}>
+            <img src={wyszukiwarka} alt="" className = "foto" />
           </Col>
-          <Col md={2} />
+
+          <Col md={3} className="wyszukiwarka-text">
+            <div>
+              <div className="text-stat">Porównuj otrzymane wyniki</div>
+              <div className="subText">
+                Sprawdź średnią cenę za pobyt, ile obiektów jest dostępnych w
+                tym terminie oraz jaka jest cena za noc
+              </div>
+            </div>
+          </Col>
+          <Col md={3} className="srednie">
+            <img src={statystyki} alt="" className = "foto"/>
+          </Col>
+        </Row>
+        <Row className = "dane">
+          <Col>
+            <div className="text-stat">Dane z serwisu</div>
+          </Col>
+          <Col className = "booking_logo">
+            <img src={booking} alt="logo_booking" />
+          </Col>
         </Row>
       </Container>
     </div>
