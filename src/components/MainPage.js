@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import dane1 from "./images/dane1.png";
-import dane from "./images/dane.png";
+import dane2 from "./images/dane2.png";
 import wyszukiwarka from "./images/wyszukiwarka.png";
 import statystyki from "./images/statystyki.png";
 import booking from "./images/booking.png";
@@ -17,7 +17,7 @@ const MainPage = () => {
         <Row className="przedstawienie m-0 ">
           <p className="triangle" />
           <Col className="obraz pt-5">
-            <img src={dane} alt="" className = "foto"/>
+            <img src={dane2} className = "img_dane2" alt="" />
           </Col>
           <Col className="text pt-5">
             <div className="box-text">

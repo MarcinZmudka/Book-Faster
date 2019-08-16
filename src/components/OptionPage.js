@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import './css/OptionPage.css';
 import { UserHotelContext } from "../content/UserHotelContext";
+import LoginPage from "./Login/LoginPage";
 
 const Option = () => {
     const [ userHotel, setUserHotel ] = useContext(UserHotelContext);
@@ -16,6 +16,9 @@ const Option = () => {
     }
   return (
     <Container>
+      <Row>
+        <LoginPage />
+      </Row>
       <Row>
         <Col />
         <Col className = "a">

@@ -49,7 +49,18 @@
 }
 .obraz {
     margin: 0;
-    color: black;
+    position: relative;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_dane2{
+    width: 70%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.75);
 }
 @media (max-width: 600px){
     .obraz {
@@ -64,7 +75,6 @@
         font-size: 4vh;
       }
       .subText{
-
           font-family: 'Open Sans', sans-serif;
           color: black;
           font-size: 2.5vh;

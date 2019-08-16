@@ -1,0 +1,14 @@
+.login_form{
+    margin-top: 5vh;
+    font-family: 'Open Sans', sans-serif;
+}
+.login_link{
+    display: block;
+    margin-top: 5vh;
+    text-decoration: none;
+    color: grey;
+}
+.login_link:hover{
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
