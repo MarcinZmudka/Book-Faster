@@ -13,7 +13,7 @@ const Filter = props => {
   const [year, setYear] = useState("");
   const [interval, setInterval] = useState("");
   const [place, setPlace] = useState("");
-  const [ userHotelStats , setUserHotelStats] = useContext(UserHotelStatsContext);
+  const [ , setUserHotelStats] = useContext(UserHotelStatsContext);
 
   const updateName = event => {
     const name = event.target.value;
@@ -183,19 +183,3 @@ const Filter = props => {
 };
 
 export default Filter;
-/*
-<form onSubmit = {search}>
-      <input type="text" placeholder="Nazwa obiektu" name="name" onChange={updateName}/>
-      <label >Przyjazd:</label>
-      <input
-        type="date"
-        id="start"
-        name="arival"
-        min="01-01-2019"
-        max="01-01-2019"
-        onChange={updateDate}
-      />
-      <input type = "number" name = "interval" placeholder = "ilość dni" min = "0" max = "14" onChange={updateInterval} />
-      <input type = "submit" value ="Szukaj"/>
-    </form>
-    */

@@ -37,9 +37,10 @@
     width: 90%;
 }
 .title-text {
-  font-family: 'Shrikhand', cursive;
+  /* font-family: 'Shrikhand', cursive; */
+  font-family: 'Racing Sans One', cursive;
   margin: 1vh;
-  font-size: 5vh;
+  font-size: 4vh;
 }
 .subText{
     font-family: 'Open Sans', sans-serif;
@@ -95,9 +96,9 @@
     width: 90%;
 }
 .text-stat{
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Racing Sans One', cursive;
     margin: 1vh;
-    font-size: 5vh;
+    font-size: 4vh;
     display: block;
 }
 .skos2{

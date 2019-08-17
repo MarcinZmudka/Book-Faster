@@ -5,15 +5,16 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { FirebaseContext } from "./../../content/FirebaseContext";
+import { UserAuthContext } from "./../../content/UserAuthContext";
 import { Link } from "react-router-dom";
 import "./css/Login.css";
 
-const LoginPage = () => {
+const LoginPage = props => {
   const [login, setLogin] = useState(0);
   const [password, setPassword] = useState(0);
   const [error, setError] = useState(0);
   const firebase = useContext(FirebaseContext);
-
+  const [, setUserAuth, , setUserInfo] = useContext(UserAuthContext);
   const updateEmail = event => {
     const value = event.target.value;
     setLogin(value);
@@ -28,9 +29,13 @@ const LoginPage = () => {
     firebase
       .signInWithEmailAndPassword(login, password)
       .then(res => {
-        console.log(res);
-      })
-      .catch(err => {
+        setUserAuth(true);
+        var user = firebase.auth.currentUser;
+        if (user != null) {
+          setUserInfo(user);//zamienić na pobranie danych z bazy
+        }
+        props.history.push("/compare");
+      }).catch(err => {
         setError(err.message);
       });
   };
@@ -40,7 +45,7 @@ const LoginPage = () => {
       <Row>
         <Col className="d-none d-sm-block" />
         <Col>
-          <span className="error_login">{error ? error : ""}</span>
+          <p className="error_login">{error ? error : ""}</p>
           <Form onSubmit={onSubmit} className="login_form">
             <Form.Group className="login_group">
               <Form.Label>Adres Email</Form.Label>

@@ -19,3 +19,9 @@
     text-decoration: none;
     color: rgb(180, 180, 180);
 }
+.option_nav{
+    margin: 0 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

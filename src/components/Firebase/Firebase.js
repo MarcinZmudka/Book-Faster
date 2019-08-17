@@ -1,5 +1,6 @@
-import app from "firebase/app";
+import firebase from "firebase";
 import "firebase/auth";
+import "firebase/firestore";
 
 const config = {
   apiKey: "AIzaSyDpabHfz2uaYAn2J0b3hKJSTUbNRitvsqE",
@@ -13,8 +14,9 @@ const config = {
 
 class FirebaseInstance {
   constructor() {
-    app.initializeApp(config);
-    this.auth = app.auth();
+    firebase.initializeApp(config);
+    this.auth = firebase.auth();
+    this.db = firebase.firestore();
   }
 
   // *** Auth API ***
@@ -30,6 +32,8 @@ class FirebaseInstance {
   passwordReset = email => this.auth.sendPasswordResetEmail(email);
 
   passwordUpdate = password => this.auth.currentUser.updatePassword(password);
+
+  getDB = () => this.db;
 }
 
 export default FirebaseInstance;

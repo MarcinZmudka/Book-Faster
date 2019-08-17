@@ -5,7 +5,7 @@ const Pages = ({ numberOfHotels, hotelPerPage, changePage, currentPage }) => {
   for (let i = 1; i < Math.ceil(numberOfHotels / hotelPerPage + 1); i++) {
     pages.push(
       <Pagination.Item
-      className = "mt-2"
+        className = "mt-2"
         key={i}
         active={i === currentPage}
         onClick={() =>
