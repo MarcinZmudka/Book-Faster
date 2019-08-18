@@ -32,10 +32,20 @@ const LoginPage = props => {
         setUserAuth(true);
         var user = firebase.auth.currentUser;
         if (user != null) {
-          setUserInfo(user);//zamienić na pobranie danych z bazy
+          let db = firebase.getDB();
+          db.collection("users")
+            .doc(login)
+            .get()
+            .then(function(user) {
+              setUserInfo(user.data());
+              console.log(user.data());
+              }).catch(function(error) {
+              console.error("Error writing document: ", error);
+            });
         }
         props.history.push("/compare");
-      }).catch(err => {
+      })
+      .catch(err => {
         setError(err.message);
       });
   };

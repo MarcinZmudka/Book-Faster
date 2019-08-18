@@ -17,7 +17,7 @@ const Register = props => {
   const [hotel, setHotel] = useState(0);
   const [place, setPlace] = useState(0);
   const [error, setError] = useState(0);
-  const [, setUserAuth, userInfo, setUserInfo] = useContext(UserAuthContext);
+  const [, setUserAuth, , setUserInfo] = useContext(UserAuthContext);
   const firebase = useContext(FirebaseContext);
 
   const updateEmail = event => {
@@ -43,12 +43,29 @@ const Register = props => {
   const updatePlace = event => {
     const value = event.target.value;
     setPlace(value);
-  }
+  };
   const onSubmit = event => {
     event.preventDefault();
     if (password1 == password2) {
-      Register_engine(firebase, name, login, password1, hotel, place, setError, setUserAuth);
-      props.history.push("/compare");
+      try{
+        Register_engine({
+          firebase: firebase,
+          name: name,
+          login: login,
+          password: password1,
+          hotel: hotel,
+          place: place,
+          setError: setError,
+          setUserAuth: setUserAuth,
+          setUserInfo: setUserInfo,
+          props_history: props.history
+        });
+      }
+      catch(error){
+        setError(error);
+      }
+      
+      //props.history.push("/compare");
     } else {
       setError("Podane hasła róźnią się");
     }
@@ -110,7 +127,7 @@ const Register = props => {
                 przy wynikach wyszukiwania.
               </Form.Text>
             </Form.Group>
-            <Form.Group controlId="formBasicEmail">
+            <Form.Group controlId="formBasicEmail1">
               <Form.Label className="label">Miejscowość</Form.Label>
               <Form.Control as="select" onChange={updatePlace}>
                 <option value="">Miejscowość</option>

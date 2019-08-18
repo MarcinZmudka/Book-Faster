@@ -7,7 +7,7 @@ import "./css/OptionPage.css";
 import { UserAuthContext } from "../content/UserAuthContext";
 
 const Option = () => {
-  const [userAuth, setUserAuth, userInfo, setUserInfo] = useContext(
+  const [, , userInfo, ] = useContext(
     UserAuthContext
   );
   const updateUserHotel = event => {
@@ -29,14 +29,15 @@ const Option = () => {
       <Row>
         <Col className="d-none d-sm-block" />
         <Col className="a">
-          <p className="display_name">Witaj, {userInfo.providerData > 0 ? userInfo.providerData[0].displayName : ""}</p>
+          <p className="display_name">Witaj, {userInfo !== undefined ? userInfo.name : ""}</p>
           <Form>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label className="label">Nazwa twojego obiektu</Form.Label>
+              <Form.Label className="label" >Nazwa twojego obiektu</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Nazwa twojego obiektu"
                 onChange={updateUserHotel}
+                value={userInfo.hotel}
               />
               <Form.Text className="undername">
                 Wpisz nazwę swojego obiektu tutaj, dzięki temu będzie wyróżniany
@@ -45,7 +46,7 @@ const Option = () => {
             </Form.Group>
             <Form.Group controlId="formBasicEmail">
               <Form.Label className="label">Miejscowość</Form.Label>
-              <Form.Control as="select" onChange={updatePlace}>
+              <Form.Control as="select" onChange={updatePlace} value={userInfo.place}>
                 <option value="">Miejscowość</option>
                 <option>Białka Tatrzańska</option>
                 <option>Bukowina Tatrzańska</option>
@@ -59,7 +60,7 @@ const Option = () => {
               <Form.Label className="label">Twój Email</Form.Label>
               <Form.Control
                 type="text"
-                value={userInfo.email}
+                value={userInfo.login}
                 onChange={updateUserHotel}
               />
             </Form.Group>
