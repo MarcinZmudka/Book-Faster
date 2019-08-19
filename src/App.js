@@ -13,12 +13,14 @@ import { FirebaseProvider } from "./content/FirebaseContext";
 import Register from "./components/Login/Register";
 import { UserAuthProvider } from "./content/UserAuthContext";
 import PrivateRoute from "./components/PrivateRoute";
+import Session from "./components/Login/UserSession";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <UserAuthProvider>
+          <Session/>
         <FirebaseProvider>
             <UserHotelProvider>
             <Navi />

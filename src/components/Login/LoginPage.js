@@ -38,7 +38,6 @@ const LoginPage = props => {
             .get()
             .then(function(user) {
               setUserInfo(user.data());
-              console.log(user.data());
               }).catch(function(error) {
               console.error("Error writing document: ", error);
             });

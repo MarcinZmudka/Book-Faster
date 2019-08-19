@@ -5,11 +5,13 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
 const SignOut = () => {
-    const [ , setUserAuth ] = useContext(UserAuthContext);
+    const [ , setUserAuth, , setUserInfo ] = useContext(UserAuthContext);
     const firebase = useContext(FirebaseContext);
     const onClick = () => {
         firebase.signOut()
         .then(() =>{
+            localStorage.setItem("booking-faster", null);
+            setUserInfo("pusto");
             setUserAuth(false);
         });
     }
