@@ -1,21 +1,18 @@
 import React, { useState, useContext } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { FirebaseContext } from "./../../content/FirebaseContext";
 import { UserAuthContext } from "./../../content/UserAuthContext";
 import "./css/Login.css";
 import Register_engine from "./Register_engine";
 
 const Register = props => {
-  const [name, setName] = useState(0);
-  const [login, setLogin] = useState(0);
-  const [password1, setPassword1] = useState(0);
-  const [password2, setPassword2] = useState(0);
-  const [hotel, setHotel] = useState(0);
-  const [place, setPlace] = useState(0);
+  const [name, setName] = useState("");
+  const [login, setLogin] = useState("");
+  const [password1, setPassword1] = useState("");
+  const [password2, setPassword2] = useState("");
+  const [hotel, setHotel] = useState("");
+  const [place, setPlace] = useState("");
   const [error, setError] = useState(0);
   const [, setUserAuth, , setUserInfo] = useContext(UserAuthContext);
   const firebase = useContext(FirebaseContext);
@@ -44,9 +41,40 @@ const Register = props => {
     const value = event.target.value;
     setPlace(value);
   };
+  const typedDataIncorrect = () => {
+    if(password1 == ""){
+      setError("Hasło nie może być puste");
+      return true;
+    }
+    if(password2 == ""){
+      setError("Hasło nie może być puste");
+      return true;
+    }
+    if(password1 != password2){
+      setError("Podane hasło różnią się");
+      return true;
+    }
+    if(login == "" ){ 
+      setError("Email nie może być pusty");
+      return true;
+    }
+    if(hotel == "" ){ 
+      setError("Hotel nie może być pusty");
+      return true;
+    }
+    if(place == ""){
+      setError("Miejscowość nie może być puste")
+      return true;
+    }
+    if(name == ""){
+      setError("Imię nie może być puste")
+      return true;
+    }
+    return false;
+  }
   const onSubmit = event => {
     event.preventDefault();
-    if (password1 == password2) {
+    if (!typedDataIncorrect()) {
       try{
         Register_engine({
           firebase: firebase,
@@ -64,10 +92,6 @@ const Register = props => {
       catch(error){
         setError(error);
       }
-      
-      //props.history.push("/compare");
-    } else {
-      setError("Podane hasła róźnią się");
     }
   };
 

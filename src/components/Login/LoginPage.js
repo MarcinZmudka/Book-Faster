@@ -1,17 +1,14 @@
 import React, { useState, useContext } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { FirebaseContext } from "./../../content/FirebaseContext";
 import { UserAuthContext } from "./../../content/UserAuthContext";
 import { Link } from "react-router-dom";
 import "./css/Login.css";
 
 const LoginPage = props => {
-  const [login, setLogin] = useState(0);
-  const [password, setPassword] = useState(0);
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState(0);
   const firebase = useContext(FirebaseContext);
   const [, setUserAuth, , setUserInfo] = useContext(UserAuthContext);
@@ -24,9 +21,34 @@ const LoginPage = props => {
     const value = event.target.value;
     setPassword(value);
   };
+  const loginPassEmpty = () => {
+    if(login == "" ){ 
+      setError("Email nie może być pusty");
+      return true;
+    }
+    if( password == ""){
+      setError("Hasło nie może być puste")
+      return true;
+    }
+    return false;
+  }
+  const checkErrorCode = err => {
+    switch(err){
+      case "auth/user-not-found":
+        setError("Nierozpoznano nazwy użytkownika");
+        break;
+      case "auth/wrong-password":
+        setError("Wprowadzone hasło jest nieprawidłowe");
+        break;
+      default: 
+        setError("Spróbuj raz jeszcze");
+        break;
+    }
+  }
   const onSubmit = event => {
     event.preventDefault();
-    firebase
+    if(!loginPassEmpty()){
+      firebase
       .signInWithEmailAndPassword(login, password)
       .then(res => {
         setUserAuth(true);
@@ -39,14 +61,14 @@ const LoginPage = props => {
             .then(function(user) {
               setUserInfo(user.data());
               }).catch(function(error) {
-              console.error("Error writing document: ", error);
             });
         }
         props.history.push("/compare");
       })
       .catch(err => {
-        setError(err.message);
+        checkErrorCode(err.code);
       });
+    }
   };
 
   return (
