@@ -43,6 +43,7 @@ const Filter = props => {
     event.preventDefault();
     //const date = new Date(year, month-1, day);
     const date = day === "" ? "" : `${day}-${month}-${year}`;
+    console.log(props.user);
     const displayedHotels = Filter_engine(props.user, props.hotels, [name, place, date, interval]);
     props.setHotels(displayedHotels[0]);
     setUserHotelStats(displayedHotels[1]);

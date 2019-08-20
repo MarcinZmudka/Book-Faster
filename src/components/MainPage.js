@@ -17,7 +17,7 @@ const MainPage = () => {
         <Row className="przedstawienie m-0 ">
           <p className="triangle" />
           <Col className="obraz pt-5">
-            <img src={dane2} className = "img_dane2" alt="" />
+            <img src={dane2} className="img_dane2" alt="" />
           </Col>
           <Col className="text pt-5">
             <div className="box-text">
@@ -32,19 +32,23 @@ const MainPage = () => {
           </Col>
         </Row>
       </Container>
-      <Container fluid>
+      <Container fluid className="m-0 p-0"> 
         <Row className="skos2">
-          <Col md={3}>
-            <div className="text-stat">Przeglądaj statystyki</div>
-            <div className="subText">
-              Sprawdź czy twój obiekt jest tańszy czy droższy w danym terminie
-              oraz ilość dostępnych obiektów
+          <Col md={4} className = "stats_column">
+            <div>
+              <div className="text-stat">Przeglądaj statystyki</div>
+              <div className="subText">
+                Sprawdź czy twój obiekt jest tańszy czy droższy w danym terminie
+                oraz ilość dostępnych obiektów
+              </div>
             </div>
           </Col>
-          <Col md={9}>
+          <Col md={8}>
             <img src={dane1} alt="" className="stats foto" />
           </Col>
         </Row>
+        </Container>
+        <Container fluid className="m-0 p-0">
         <Row className="skos3">
           <p className="triangle2" />
           <Col md={3} className="wyszukiwarka-text">
@@ -56,7 +60,7 @@ const MainPage = () => {
             </div>
           </Col>
           <Col className={"wyszukiwarka"} md={3}>
-            <img src={wyszukiwarka} alt="" className = "foto" />
+            <img src={wyszukiwarka} alt="" className="foto" />
           </Col>
 
           <Col md={3} className="wyszukiwarka-text">
@@ -69,14 +73,14 @@ const MainPage = () => {
             </div>
           </Col>
           <Col md={3} className="srednie">
-            <img src={statystyki} alt="" className = "foto"/>
+            <img src={statystyki} alt="" className="foto" />
           </Col>
         </Row>
-        <Row className = "dane">
+        <Row className="dane">
           <Col>
             <div className="text-stat">Dane z serwisu</div>
           </Col>
-          <Col className = "booking_logo">
+          <Col className="booking_logo">
             <img src={booking} alt="logo_booking" />
           </Col>
         </Row>

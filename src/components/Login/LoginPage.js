@@ -50,14 +50,13 @@ const LoginPage = props => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col className="d-none d-sm-block" />
-        <Col>
+        <div className = "login_background">
+          <p className="title">get Booked faster</p>
+          <p className="login_title">Zaloguj się</p>
           <p className="error_login">{error ? error : ""}</p>
           <Form onSubmit={onSubmit} className="login_form">
             <Form.Group className="login_group">
-              <Form.Label>Adres Email</Form.Label>
+              <Form.Label className="label">Adres Email</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Wprowadź email"
@@ -67,7 +66,7 @@ const LoginPage = props => {
             </Form.Group>
 
             <Form.Group className="login_group">
-              <Form.Label>Hasło</Form.Label>
+              <Form.Label className="label">Hasło</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Hasło"
@@ -83,10 +82,11 @@ const LoginPage = props => {
           <Link to="/register" className="login_link">
             Nie masz konta ? Zarejestruj się
           </Link>
-        </Col>
-        <Col className="d-none d-sm-block" />
-      </Row>
-    </Container>
+          <Link to="/passwordReset" className = "login_reset">
+            Zapomniałeś hasła ?
+          </Link>
+        </div>
+
   );
 };
 

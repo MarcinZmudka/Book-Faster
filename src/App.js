@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { HotelProvider } from "./content/HotelContext";
-import { UserHotelProvider } from "./content/UserHotelContext";
 import { UserHotelStatsProvider } from "./content/UserHotelStatsContext";
 import CompareContext from "./components/CompareContext";
 import Navi from "./components/Navi";
@@ -20,23 +19,23 @@ function App() {
     <div className="App">
       <Router>
         <UserAuthProvider>
-          <Session/>
-        <FirebaseProvider>
-            <UserHotelProvider>
-            <Navi />
-              <Switch>
-                <Route path="/" exact component={MainPage} />
-                <PrivateRoute path="/option" component={Option} />
-                <Route path="/login" component={LoginPage} />
-                <Route path="/Register" component={Register} />
-                <HotelProvider>
-                  <UserHotelStatsProvider>
-                    <PrivateRoute path="/compare" component={CompareContext} />
-                  </UserHotelStatsProvider>
-                </HotelProvider>
-                <Route path="/c" component={MainPage}/>
-              </Switch>
-            </UserHotelProvider>
+          <Session />
+          <FirebaseProvider>
+            <Switch>
+              <Route path="/login" component={LoginPage} />
+              <Route path="/Register" component={Register} />
+              <Route path="/" component={Navi} />
+            </Switch>
+            <Switch>
+              <Route path="/" exact component={MainPage} />
+              <PrivateRoute path="/option" component={Option} />
+              <HotelProvider>
+                <UserHotelStatsProvider>
+                  <PrivateRoute path="/compare" component={CompareContext} />
+                </UserHotelStatsProvider>
+              </HotelProvider>
+              <Route path="/c" component={MainPage} />
+            </Switch>
           </FirebaseProvider>
         </UserAuthProvider>
       </Router>

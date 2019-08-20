@@ -13,7 +13,7 @@ const Option = () => {
   const firebase = useContext(FirebaseContext);
   const [hotel, setHotel] = useState(userInfo.hotel);
   const [place, setPlace] = useState(userInfo.place);
-
+  const [note, setNote] = useState(false);
   const updateUserHotel = event => {
     const value = event.target.value;
     setHotel(value);
@@ -36,7 +36,7 @@ const Option = () => {
       hotel: hotel,
       place: place
   }).then(() => {
-    console.log("zmiany został zapisane");
+    setNote("Zmiany zostały zachowane");
   });
   }
 
@@ -45,6 +45,7 @@ const Option = () => {
       <Row>
         <Col className="d-none d-sm-block" />
         <Col className="a">
+          <p className = "option_note">{note ? note : ""}</p>
           <p className="display_name">
             Witaj, {userInfo !== undefined ? userInfo.name : ""}
           </p>

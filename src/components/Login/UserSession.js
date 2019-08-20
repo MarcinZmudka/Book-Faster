@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { UserAuthContext } from "../../content/UserAuthContext";
+import { FirebaseContext } from "../../content/FirebaseContext";
 
 const Session = () => {
   const [userAuth, setUserAuth, userInfo, setUserInfo] = useContext(
     UserAuthContext
   );
+  const firebase = useContext(FirebaseContext);
   const UserIsLogged = () => {
     return userInfo != "pusto";
   };
@@ -14,6 +16,7 @@ const Session = () => {
       if (!userCrossedSession(user)) {
         setUserInfo(user);
         setUserAuth(true);
+        //
       }
     }
   };

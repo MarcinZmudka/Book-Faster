@@ -1,13 +1,13 @@
 import React, {useContext} from "react";
 import { HotelContext } from "../content/HotelContext";
-import { UserHotelContext } from "../content/UserHotelContext";
 import HotelList from "./HotelList";
+import { UserAuthContext } from "../content/UserAuthContext";
 
 const CompareContext = () => {
     const [ hotel ] = useContext(HotelContext);
-    const [ userHotel ] = useContext(UserHotelContext);
+    const [ , , user ] = useContext(UserAuthContext);
     return (
-        <HotelList hotel={hotel} userHotel = {userHotel}/>
+        <HotelList hotel={hotel} userHotel = {user.hotel}/>
     )
 }
 

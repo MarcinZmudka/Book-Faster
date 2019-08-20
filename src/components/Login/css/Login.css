@@ -1,19 +1,48 @@
-.login_form{
-    margin-top: 1vh;
-    font-family: 'Open Sans', sans-serif;
+.login_form {
+  margin-top: 1vh;
+  font-family: "Open Sans", sans-serif;
 }
-.login_link{
-    display: block;
-    margin-top: 5vh;
-    text-decoration: none;
-    color: grey;
+.login_link {
+  margin-top: 5vh;
 }
-.login_link:hover{
-    text-decoration: none;
-    color: rgb(26, 26, 26);
+.login_link,
+.login_reset {
+  display: block;
+  text-decoration: none;
+  color: grey;
 }
-.error_login{
-    color: red;
-    margin-top: 2vh;
-    margin-bottom: 0;
+.login_link:hover,
+.login_reset:hover {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+.error_login {
+  color: red;
+  margin-top: 2vh;
+  margin-bottom: 0;
+}
+.login_reset {
+  margin-top: 2vh;
+}
+.login_background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  border-radius: 10px;
+  padding: 1vh 1vh 2vh 1vh;
+}
+@media(max-width: 600px){
+    .login_background{
+        width: 95vw;
+    }
+}
+.login_title{
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.5em;
+}
+.login_title:hover{
+  color: grey;
+
 }

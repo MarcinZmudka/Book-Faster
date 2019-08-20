@@ -72,10 +72,9 @@ const Register = props => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col className="d-none d-sm-block" />
-        <Col>
+        <div className = "login_background">
+          <p className="title">get Booked faster</p>
+          <p className="login_title">Zarejestruj się</p>
           <p className="error_login">{error ? error : ""}</p>
           <Form onSubmit={onSubmit} className="login_form">
             <Form.Group className="login_group">
@@ -143,10 +142,7 @@ const Register = props => {
               Zarejestruj się
             </Button>
           </Form>
-        </Col>
-        <Col className="d-none d-sm-block" />
-      </Row>
-    </Container>
+        </div>
   );
 };
 
