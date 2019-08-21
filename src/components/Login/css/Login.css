@@ -3,7 +3,7 @@
   font-family: "Open Sans", sans-serif;
 }
 .login_link {
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 .login_link,
 .login_reset {
@@ -30,19 +30,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
+  background: rgb(235, 234, 234);
   border-radius: 10px;
   padding: 1vh 1vh 2vh 1vh;
+  z-index: 1;
+  -webkit-box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
-@media(max-width: 600px){
-    .login_background{
-        width: 95vw;
-    }
+@media (max-width: 600px) {
+  .login_background {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    width: 90vw;
+  }
 }
-.login_title{
-  font-family: 'Shrikhand', cursive;
+.login_title {
+  font-family: "Shrikhand", cursive;
   font-size: 1.5em;
 }
-.login_title:hover{
+.login_title:hover {
   color: grey;
-
 }

@@ -162,7 +162,7 @@ const Register = props => {
                 W której znajduje się twój obiekt
               </Form.Text>
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="secondary" type="submit">
               Zarejestruj się
             </Button>
           </Form>

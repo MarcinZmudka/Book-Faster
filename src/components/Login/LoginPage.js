@@ -97,7 +97,7 @@ const LoginPage = props => {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="secondary" type="submit">
               Zaloguj się
             </Button>
           </Form>

@@ -13,6 +13,7 @@ import Register from "./components/Login/Register";
 import { UserAuthProvider } from "./content/UserAuthContext";
 import PrivateRoute from "./components/PrivateRoute";
 import Session from "./components/Login/UserSession";
+import PasswordReset from "./components/Login/PasswordReset";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Switch>
               <Route path="/login" component={LoginPage} />
               <Route path="/Register" component={Register} />
+              <Route path="/PasswordReset" component={PasswordReset}/>
               <Route path="/" component={Navi} />
             </Switch>
             <Switch>
