@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { FirebaseContext } from "../../content/FirebaseContext";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+
 const ResetPassword = () => {
     const firebase = useContext(FirebaseContext);
     const [ error, setError] = useState("");
