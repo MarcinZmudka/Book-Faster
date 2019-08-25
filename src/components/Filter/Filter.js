@@ -64,10 +64,11 @@ const Filter = props => {
       setError("");
       const displayedHotels = Filter_engine(props.user, props.hotels, [
         name,
-        place,
         date,
-        interval
+        interval,
+        place
       ]);
+      console.log(displayedHotels);
       props.setHotels(displayedHotels[0]);
       setUserHotelStats(displayedHotels[1]);
     }
