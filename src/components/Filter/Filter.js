@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import "./Filter.css";
-import Filter_engine from './Filter_eng';
+import Filter_engine from "./Filter_eng";
 import { UserHotelStatsContext } from "../../content/UserHotelStatsContext";
 
 const Filter = props => {
@@ -13,7 +13,8 @@ const Filter = props => {
   const [year, setYear] = useState("");
   const [interval, setInterval] = useState("");
   const [place, setPlace] = useState("");
-  const [ , setUserHotelStats] = useContext(UserHotelStatsContext);
+  const [, setUserHotelStats] = useContext(UserHotelStatsContext);
+  const [error, setError] = useState("");
 
   const updateName = event => {
     const name = event.target.value;
@@ -22,7 +23,7 @@ const Filter = props => {
   const updatePlace = event => {
     const place = event.target.value;
     setPlace(place);
-  }
+  };
   const updateDay = event => {
     let date = event.target.value;
     setDay(date);
@@ -39,14 +40,37 @@ const Filter = props => {
     const interval = event.target.value;
     setInterval(interval);
   };
+  const isDateFormEmpty = () => {
+    if (day == "" && month == "" && year == "") {
+      return false;
+    }
+    if (day == "") {
+      setError("Podaj dzień");
+      return true;
+    }
+    if (month == "") {
+      setError("Podaj miesiąc");
+      return true;
+    }
+    if (year == "") {
+      setError("Podaj rok");
+      return true;
+    }
+  };
   const search = event => {
     event.preventDefault();
-    //const date = new Date(year, month-1, day);
     const date = day === "" ? "" : `${day}-${month}-${year}`;
-    console.log(props.user);
-    const displayedHotels = Filter_engine(props.user, props.hotels, [name, place, date, interval]);
-    props.setHotels(displayedHotels[0]);
-    setUserHotelStats(displayedHotels[1]);
+    if (!isDateFormEmpty()) {
+      setError("");
+      const displayedHotels = Filter_engine(props.user, props.hotels, [
+        name,
+        place,
+        date,
+        interval
+      ]);
+      props.setHotels(displayedHotels[0]);
+      setUserHotelStats(displayedHotels[1]);
+    }
   };
   const clear = event => {
     event.preventDefault();
@@ -63,6 +87,7 @@ const Filter = props => {
   };
   return (
     <Form id="myForm" onSubmit={search}>
+      <p className="error_filter">{error != "" ? error : null}</p>
       <Form.Group controlId="formBasicEmail">
         <Form.Label className="label">Nazwa obiektu</Form.Label>
         <Form.Control
@@ -169,12 +194,12 @@ const Filter = props => {
       </Form.Group>
       <Form.Row>
         <Form.Group as={Col}>
-          <Button variant="primary" type="submit" className = "button">
+          <Button variant="primary" type="submit" className="button">
             Szukaj
           </Button>
         </Form.Group>
         <Form.Group as={Col}>
-          <Button variant="danger" onClick={clear} className = "button">
+          <Button variant="danger" onClick={clear} className="button">
             Wyczyść
           </Button>
         </Form.Group>

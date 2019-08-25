@@ -1,15 +1,19 @@
 #myForm{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 .label{
     font-family: 'Roboto Slab', serif;
 }
 .underName{
-    font-size: 1rem;
+    font-size: 2vw;
     color: black;
     font-family: 'Open Sans', sans-serif;
 }
 .button{
-    width: 10rem;
+    width: 5vh;
     font-family: 'Open Sans', sans-serif;
+}
+.error_filter{
+    font-size: 1vw;
+    color: red;
 }

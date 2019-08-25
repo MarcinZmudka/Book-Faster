@@ -1,12 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { UserAuthContext } from "../../content/UserAuthContext";
-import { FirebaseContext } from "../../content/FirebaseContext";
 
-const Session = () => {
+const Session = (props) => {
   const [userAuth, setUserAuth, userInfo, setUserInfo] = useContext(
     UserAuthContext
   );
-  const firebase = useContext(FirebaseContext);
   const UserIsLogged = () => {
     return userInfo != "pusto";
   };
@@ -16,14 +14,14 @@ const Session = () => {
       if (!userCrossedSession(user)) {
         setUserInfo(user);
         setUserAuth(true);
-        //
+        props.history.push("/compare");
       }
     }
   };
   const userCrossedSession = user => {
     const date = -(new Date(user.startTimeOfSession) - new Date());
-    const int = parseInt(date) / 360000;
-    return int > 1;
+    const int = parseInt(date) / (100*3600);
+    return (int > 1);
   };
   useEffect(() => {
     if (UserIsLogged()) {

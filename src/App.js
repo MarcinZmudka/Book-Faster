@@ -20,12 +20,14 @@ function App() {
     <div className="App">
       <Router>
         <UserAuthProvider>
-          <Session />
+          <Switch>
+            <Route path="/" component={Session} />
+          </Switch>
           <FirebaseProvider>
             <Switch>
               <Route path="/login" component={LoginPage} />
               <Route path="/Register" component={Register} />
-              <Route path="/PasswordReset" component={PasswordReset}/>
+              <Route path="/PasswordReset" component={PasswordReset} />
               <Route path="/" component={Navi} />
             </Switch>
             <Switch>
