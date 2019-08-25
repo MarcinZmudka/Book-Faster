@@ -4,9 +4,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import "./css/OptionPage.css";
-import { UserAuthContext } from "../content/UserAuthContext";
-import { FirebaseContext } from "../content/FirebaseContext";
+import "./OptionPage.css";
+import { UserAuthContext } from "../../content/UserAuthContext";
+import { FirebaseContext } from "../../content/FirebaseContext";
 
 const Option = () => {
   const [, , userInfo, setUserInfo] = useContext(UserAuthContext);

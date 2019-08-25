@@ -2,9 +2,9 @@ import React, { useState, useContext } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
-import "./css/Filter.css";
+import "./Filter.css";
 import Filter_engine from './Filter_eng';
-import { UserHotelStatsContext } from "../content/UserHotelStatsContext";
+import { UserHotelStatsContext } from "../../content/UserHotelStatsContext";
 
 const Filter = props => {
   const [name, setName] = useState("");

@@ -1,7 +1,7 @@
 import React, {useContext}from "react";
-import { UserHotelStatsContext } from "../content/UserHotelStatsContext";
-import Hotel from "./Hotel";
-import "./css/UserHotel.css";
+import { UserHotelStatsContext } from "../../content/UserHotelStatsContext";
+import Hotel from "../Hotel/Hotel";
+import "./UserHotel.css";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 const jumboStyle1 = {

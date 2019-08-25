@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import "./css/Nav.css";
+import "./Nav.css";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
-import { UserAuthContext } from "./../content/UserAuthContext";
-import SignOut from "./Login/SignOut";
+import { UserAuthContext } from "../../content/UserAuthContext";
+import SignOut from "../Login/SignOut";
 
 const Navi = () => {
   const [userAuth] = useContext(UserAuthContext);

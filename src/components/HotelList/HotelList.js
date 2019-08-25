@@ -1,16 +1,16 @@
 import React from "react";
-import Hotel from "./Hotel";
-import Filter from "./Filter";
-import Statistic from "./Statistics";
+import Hotel from "../Hotel/Hotel";
+import Filter from "../Filter/Filter";
+import Statistic from "../Statistics/Statistics";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Description from "./Description";
+import Description from "../Description/Description";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import "./css/HotelList.css";
-import Sorter from "./Sorter";
-import UserHotel from "./UserHotel";
-import Pages from './Pagination';
+import "./HotelList.css";
+import Sorter from "../Sorter/Sorter";
+import UserHotel from "../UserHotel/UserHotel";
+import Pages from '../Pagination/Pagination';
 
 class HotelList extends React.Component {
   constructor(props) {

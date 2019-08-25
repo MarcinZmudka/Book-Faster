@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import './css/Hotel.css';
+import './Hotel.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { UserHotelStatsContext } from '../content/UserHotelStatsContext';
+import { UserHotelStatsContext } from '../../content/UserHotelStatsContext';
 
 const Hotel = (props) => {
     const [ userHotelStats ] = useContext(UserHotelStatsContext);
