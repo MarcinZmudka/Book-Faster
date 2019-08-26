@@ -68,7 +68,6 @@ const Filter = props => {
         interval,
         place
       ]);
-      console.log(displayedHotels);
       props.setHotels(displayedHotels[0]);
       setUserHotelStats(displayedHotels[1]);
     }

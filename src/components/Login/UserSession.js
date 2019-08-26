@@ -20,7 +20,8 @@ const Session = (props) => {
   };
   const userCrossedSession = user => {
     const date = -(new Date(user.startTimeOfSession) - new Date());
-    const int = parseInt(date) / (100*3600);
+    const int = parseInt(date) / (100*60*60);
+    console.log("int", int, int > 1);
     return (int > 1);
   };
   useEffect(() => {

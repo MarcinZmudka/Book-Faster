@@ -1,35 +1,37 @@
-.titles{
-    font-size: 19px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid black;
-    font-family: 'Roboto Slab', serif;
+.titles {
+  font-size: 19px;
+
+  font-family: "Roboto Slab", serif;
 }
-@media (max-width: 600px){
-    .titles{
-        display: flex;
-        justify-content: center;
-    }
+@media (max-width: 600px) {
+  .titles {
+    display: flex;
+    justify-content: center;
+  }
 }
-.desc_title{
-    transition: transform .5s ease-in-out;
-    position: relative;
-    width: 70%;
-} 
-.desc_title i {
+.desc_title {
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+/* .desc_title i {
     margin : 10px;
     transform: rotate(90deg);
     transition: transform .5s ease-in-out;
-}
-.desc_title:hover i{
-    transform: rotate(0deg);
-}
-.desc_title:hover{
+}*/
+.desc_title:hover {
+    transform: translateY(10px);
+} 
+.text_desc{
     cursor: pointer;
 }
-.desc_title:hover span, .desc_title:hover p{
-    display: block;
-    visibility: visible;
-    opacity:1;
+.desc_title:hover span,
+.desc_title:hover p {
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* .desc_title::after{

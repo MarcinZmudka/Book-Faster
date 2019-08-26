@@ -12,15 +12,13 @@ const Description = (props) => {
     if(userHotelExist()){
       return (
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("cena")}>
-          <strong>Różnica</strong>
-          <i className="fas fa-caret-square-down"></i>
+          <div><strong className="text_desc">Różnica</strong></div>
       </Col>
       )
     }else{
       return (
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("data wyjazdu")}>
-          <strong>Data wyjazdu</strong>
-          <i className="fas fa-caret-square-down"></i>
+          <div><strong className="text_desc">Data wyjazdu</strong></div>
         </Col>
       )
     }
@@ -29,25 +27,20 @@ const Description = (props) => {
     <Container fluid className = "desc_container">
       <Row className="my-3 titles ">
           <Col className="m-0 p-0 desc_title" md={3} onClick = {()=> props.sort("nazwa")}>
-            <strong>Nazwa obiektu</strong>
-            <i className="fas fa-caret-square-down"></i>
+          <p ><strong className="text_desc">Nazwa obiektu</strong></p>
           </Col>
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("cena")}>
-          <strong>Cena</strong>
-          <i className="fas fa-caret-square-down"></i>
+        <div><strong className="text_desc">Cena</strong></div>
         </Col>
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("miejscowość")}>
-          <strong>Miejscowość</strong>
-          <i className="fas fa-caret-square-down"></i>
+        <div ><strong className="text_desc">Miejscowość</strong></div>
         </Col>
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("data przyjazdu")}>
-          <strong>Data przyjazdu</strong>
-          <i className="fas fa-caret-square-down"></i>
+        <div ><strong className="text_desc">Data przyjazdu</strong></div>
         </Col>
         {whatToShow()}
         <Col className="m-0 p-0 desc_title" md={1} onClick = {()=> props.sort("dni")}>
-          <strong>Dni</strong>
-          <i className="fas fa-caret-square-down"></i>
+        <div ><strong className="text_desc">Dni</strong></div>
         </Col>
       </Row>
     </Container>
