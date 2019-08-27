@@ -11,8 +11,10 @@ const SignOut = () => {
         firebase.signOut()
         .then(() =>{
             localStorage.setItem("booking-faster", null);
-            setUserInfo("pusto");
-            setUserAuth(false);
+            setTimeout(() => {
+                setUserInfo("pusto");
+                setUserAuth(false);
+            }, 50);
         });
     }
     return (

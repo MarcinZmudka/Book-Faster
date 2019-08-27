@@ -9,7 +9,6 @@ export const SearchProvider = props => {
     interval: 0,
     date: "",
   });
-  console.log(search);
   return (
     <SearchContext.Provider value={[search, setSearch]}>
       {props.children}

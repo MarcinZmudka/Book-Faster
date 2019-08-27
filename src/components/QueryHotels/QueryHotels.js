@@ -26,23 +26,29 @@ const HotelQuery = gql`
 const QueryHotels = () => {
   const [{ name, place, interval, date }] = useContext(SearchContext);
   const [, setUserHotelStats] = useContext(UserHotelStatsContext);
-  const [, , userInfo, ] = useContext(UserAuthContext);
+  const [userAuth, , userInfo] = useContext(UserAuthContext);
   const [, setHotel] = useContext(HotelContext);
   const { loading, error, data } = useQuery(HotelQuery, {
     variables: { name, place, date, interval }
   });
+
   useEffect(() => {
-    const displayHotels = findUser(data.hotel, userInfo.hotel);
-    setHotel(displayHotels[0]);
-    setUserHotelStats(displayHotels[1]);
+    if (userAuth) {
+      const displayHotels = findUser(data.hotel, userInfo.hotel, date != "");
+      setHotel(displayHotels[0]);
+      setUserHotelStats(displayHotels[1]);
+    }
   }, [name, place, interval, date, data]);
 
   return <div></div>;
 };
 
-const findUser = (selected = [], user) => {
+const findUser = (selected = [], user, date) => {
+  let displayUser = "";
   let displayHotels = selected.filter(item => item.name.trim() !== user);
-  let displayUser = selected.filter(item => item.name.trim() === user);
+  if (date) {
+    displayUser = selected.filter(item => item.name.trim() === user);
+  }
   return [displayHotels, displayUser];
 };
 export default QueryHotels;

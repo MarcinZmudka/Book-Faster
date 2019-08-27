@@ -35,10 +35,12 @@ class HotelList extends React.Component {
 
   changePage = (indexOfFirst, indexOfLast, currentPage) => {
     let newState = this.state;
-    newState.currentPage = currentPage;
-    newState.indexOfFirst = indexOfFirst;
-    newState.indexOfLast = indexOfLast;
-    this.setState(newState);
+    if(indexOfFirst <= this.state.displayedHotels.length && indexOfFirst >= 0){
+      newState.currentPage = currentPage;
+      newState.indexOfFirst = indexOfFirst;
+      newState.indexOfLast = indexOfLast;
+      this.setState(newState);
+    }
   }
   sort = type => {
     const newDisplayed = Sorter(type, this.state.displayedHotels);
@@ -48,7 +50,6 @@ class HotelList extends React.Component {
   };
   componentDidUpdate(prevProps){
     if(prevProps != this.props){
-      console.log("mam updata");
       const hotels = this.props.hotel;
       this.setState({
         displayedHotels: hotels,
@@ -64,7 +65,7 @@ class HotelList extends React.Component {
         <Row className="">
           <Col lg={3} className="m-0">
             <Jumbotron className="filter_jumbotron py-3">
-              <Filter hotels = {this.props.hotel} setHotels = {this.setDisplayed} user = {this.props.userHotel} userHotel = {UserHotel.setUser}/>
+              <Filter />
             </Jumbotron>
             <Jumbotron className="statistic_jumbotron py-3">
               {this.state.displayedHotels ? (
