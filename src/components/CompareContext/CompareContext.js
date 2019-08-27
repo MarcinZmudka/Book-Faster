@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, Fragment} from "react";
 import { HotelContext } from "../../content/HotelContext";
 import HotelList from "../HotelList/HotelList";
 import { UserAuthContext } from "../../content/UserAuthContext";
@@ -7,7 +7,9 @@ const CompareContext = () => {
     const [ hotel ] = useContext(HotelContext);
     const [ , , user ] = useContext(UserAuthContext);
     return (
-        <HotelList hotel={hotel} userHotel = {user.hotel}/>
+        <Fragment>
+            <HotelList hotel={hotel} userHotel = {user.hotel}/>
+        </Fragment>
     )
 }
 

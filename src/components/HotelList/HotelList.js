@@ -12,23 +12,18 @@ import Sorter from "../Sorter/Sorter";
 import UserHotel from "../UserHotel/UserHotel";
 import Pages from '../Pagination/Pagination';
 
+
 class HotelList extends React.Component {
   constructor(props) {
     super(props);
     const hotels = props.hotel;
     this.state = {
       displayedHotels: hotels,
-      averagePrice: 0,
-      numberOfHotels: 0,
-      minPrice: 0,
-      maxPrice: 0,
-      pricePerNight: 0,
       currentPage: 1,
       indexOfFirst: 0,
       indexOfLast: 10,
     };
   }
-
   setDisplayed = ( displayed) => {
     let newState = this.state;
     newState.displayedHotels = displayed;
@@ -36,17 +31,8 @@ class HotelList extends React.Component {
     newState.indexOfFirst = 0;
     newState.indexOfLast = 10;
     this.setState(newState);
-    this.updateStatistics();
   }
-  updateStatistics = () => {
-    setTimeout(() => {
-      this.updateAveragePrice();
-      this.updateMaxPrice();
-      this.updateMinPrice();
-      this.updateNumberOfHotels();
-      this.updatePricePerNigth();
-    }, 100);
-  }
+
   changePage = (indexOfFirst, indexOfLast, currentPage) => {
     let newState = this.state;
     newState.currentPage = currentPage;
@@ -60,74 +46,17 @@ class HotelList extends React.Component {
     displayed.displayedHotels = newDisplayed;
     this.setState(displayed);
   };
-  updateAveragePrice = () => {
-    let summary = 0;
-    if (this.state.displayedHotels.length !== 0) {
-      for (let i = 0; i < this.state.displayedHotels.length; i++) {
-        summary += parseInt(this.state.displayedHotels[i].price, 10);
-      }
-      const length = this.state.displayedHotels.length;
-      let averagePrice = Math.round(summary / length);
-      this.setState(prevState => (prevState.averagePrice = averagePrice));
-    } else {
-      this.setState(prevState => (prevState.averagePrice = 0));
+  componentDidUpdate(prevProps){
+    if(prevProps != this.props){
+      console.log("mam updata");
+      const hotels = this.props.hotel;
+      this.setState({
+        displayedHotels: hotels,
+        currentPage: 1,
+        indexOfFirst: 0,
+        indexOfLast: 10,
+      })
     }
-  };
-  updateMinPrice = () => {
-    let min = 0;
-    if (this.state.displayedHotels.length !== 0) {
-      min = parseInt(this.state.displayedHotels[0].price, 10);
-      for (let i = 1; i < this.state.displayedHotels.length; i++) {
-        if (min > this.state.displayedHotels[i].price)
-          min = parseInt(this.state.displayedHotels[i].price, 10);
-      }
-    }
-    this.setState(prevState => (prevState.minPrice = min));
-  };
-  updateMaxPrice = () => {
-    let max = 0;
-    if (this.state.displayedHotels.length !== 0) {
-      max = parseInt(this.state.displayedHotels[0].price, 10);
-      for (let i = 1; i < this.state.displayedHotels.length; i++) {
-        if (max < this.state.displayedHotels[i].price)
-          max = parseInt(this.state.displayedHotels[i].price, 10);
-      }
-    }
-    this.setState(prevState => (prevState.maxPrice = max));
-  };
-  updateNumberOfHotels = () => {
-    if (this.state.displayedHotels.length > 0) {
-      const length = this.state.displayedHotels.length;
-      this.setState(prevState => (prevState.numberOfHotels = length));
-    } else {
-      this.setState(prevState => (prevState.numberOfHotels = 0));
-    }
-  };
-  updatePricePerNigth = () => {
-    if (this.state.displayedHotels.length > 0) {
-      const displayed = this.state.displayedHotels;
-      let length = displayed.length;
-      let averageDay = 0;
-      for (let i = 0; i < length; i++) {
-        averageDay += displayed[i].interval;
-      }
-      averageDay = averageDay / length;
-      let value = Number.isInteger(averageDay)
-        ? Math.round(this.state.averagePrice / averageDay)
-        : "Ustal interwał";
-      let state = this.state;
-      state.pricePerNight = value;
-      this.setState(state);
-    }
-  };
-  componentDidMount() {
-    setTimeout(() => {
-      this.updateAveragePrice();
-      this.updateMaxPrice();
-      this.updateMinPrice();
-      this.updateNumberOfHotels();
-      this.updatePricePerNigth();
-    }, 300);
   }
   render() {
     return (
@@ -140,11 +69,7 @@ class HotelList extends React.Component {
             <Jumbotron className="statistic_jumbotron py-3">
               {this.state.displayedHotels ? (
                 <Statistic
-                  averagePrice={this.state.averagePrice}
-                  numberOfObjects={this.state.numberOfHotels}
-                  minPrice={this.state.minPrice}
-                  maxPrice={this.state.maxPrice}
-                  pricePerNight={this.state.pricePerNight}
+                  hotels = {this.state.displayedHotels}
                 />
               ) : (
                 ""
@@ -159,9 +84,6 @@ class HotelList extends React.Component {
                 ? this.state.displayedHotels.slice(this.state.indexOfFirst,this.state.indexOfLast).map(item => {
                     return <Hotel value={item} key={item.id} />;
                   })
-                : ""}
-              {this.state.displayedHotels === []
-                ? "Nie znaleziony obiektów spełniających podane kryteria"
                 : ""}
             </Jumbotron>
             <Pages numberOfHotels = {this.state.displayedHotels.length} hotelPerPage = {10} changePage = {this.changePage} currentPage ={this.state.currentPage}/>

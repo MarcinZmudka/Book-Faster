@@ -16,7 +16,23 @@ const Pages = ({ numberOfHotels, hotelPerPage, changePage, currentPage }) => {
       </Pagination.Item>
     );
   }
-  return <Pagination>{pages}</Pagination>;
+  const firstIndexOfLastPage = (pages.length-1)*hotelPerPage;
+  return (
+  <Pagination>
+    <Pagination.First className = "mt-2" onClick={() =>
+          changePage(0, hotelPerPage, 1)
+        }/>
+    <Pagination.Prev className = "mt-2" onClick={() =>
+          changePage((currentPage-2) * hotelPerPage, (currentPage-1)*hotelPerPage, currentPage-1)
+        }/>
+    {pages.filter(item => Math.abs(item.key - currentPage) < 2)}
+    <Pagination.Next className = "mt-2" onClick={() =>
+          changePage((currentPage) * hotelPerPage, (currentPage+1)*hotelPerPage, currentPage+1)
+        }/>
+    <Pagination.Last className = "mt-2" onClick={() =>
+          changePage(firstIndexOfLastPage,numberOfHotels,pages.length)
+        }/>
+  </Pagination>);
 };
 
 export default Pages;

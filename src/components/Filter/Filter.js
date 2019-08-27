@@ -1,21 +1,22 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, Fragment } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import "./Filter.css";
 import Filter_engine from "./Filter_eng";
 import { UserHotelStatsContext } from "../../content/UserHotelStatsContext";
+import { SearchContext } from "../../content/SearchContext";
 
 const Filter = props => {
   const [name, setName] = useState("");
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
-  const [interval, setInterval] = useState("");
+  const [interval, setInterval] = useState(0);
   const [place, setPlace] = useState("");
   const [, setUserHotelStats] = useContext(UserHotelStatsContext);
   const [error, setError] = useState("");
-
+  const [, setSearchContext] = useContext(SearchContext);
   const updateName = event => {
     const name = event.target.value;
     setName(name);
@@ -59,33 +60,38 @@ const Filter = props => {
   };
   const search = event => {
     event.preventDefault();
-    const date = day === "" ? "" : `${day}-${month}-${year}`;
+    const date = day === "" ? "" : `${year}-${month}-${day}`;
     if (!isDateFormEmpty()) {
       setError("");
-      const displayedHotels = Filter_engine(props.user, props.hotels, [
+      setSearchContext({
         name,
-        date,
+        place,
         interval,
-        place
-      ]);
-      props.setHotels(displayedHotels[0]);
-      setUserHotelStats(displayedHotels[1]);
+        date,
+      });
     }
   };
   const clear = event => {
     event.preventDefault();
     setName("");
-    setDay("");
-    setMonth("");
-    setYear("");
-    setInterval("");
+    setDay("27");
+    setMonth("9");
+    setYear("2019");
+    setInterval(0);
     setPlace("");
+    setSearchContext({
+      name: "",
+      place: "",
+      interval: 0,
+      date: `2019-8-30`,
+    });
     document.getElementById("myForm").reset();
-    const hotels = props.hotels;
-    props.setHotels(hotels);
-    setUserHotelStats("");
+    // const hotels = props.hotels;
+    // props.setHotels(hotels);
+    // setUserHotelStats("");
   };
   return (
+    <Fragment>
     <Form id="myForm" onSubmit={search}>
       <p className="error_filter">{error != "" ? error : null}</p>
       <Form.Group controlId="formBasicEmail">
@@ -205,6 +211,7 @@ const Filter = props => {
         </Form.Group>
       </Form.Row>
     </Form>
+    </Fragment>
   );
 };
 

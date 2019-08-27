@@ -14,33 +14,46 @@ import { UserAuthProvider } from "./content/UserAuthContext";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Session from "./components/Login/UserSession";
 import PasswordReset from "./components/Login/PasswordReset";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
+import { SearchProvider } from "./content/SearchContext";
+import QueryHotel from "./components/QueryHotels/QueryHotels";
+
+const client = new ApolloClient({
+  uri: `http://localhost:4000/graphql`
+});
 
 function App() {
   return (
     <div className="App">
       <Router>
         <UserAuthProvider>
-          <Switch>
-            <Route path="/" component={Session} />
-          </Switch>
-          <FirebaseProvider>
-            <Switch>
-              <Route path="/login" component={LoginPage} />
-              <Route path="/Register" component={Register} />
-              <Route path="/PasswordReset" component={PasswordReset} />
-              <Route path="/" component={Navi} />
-            </Switch>
-            <Switch>
-              <Route path="/" exact component={MainPage} />
-              <PrivateRoute path="/option" component={Option} />
-              <HotelProvider>
-                <UserHotelStatsProvider>
-                  <PrivateRoute path="/compare" component={CompareContext} />
-                </UserHotelStatsProvider>
-              </HotelProvider>
-              <Route path="/c" component={MainPage} />
-            </Switch>
-          </FirebaseProvider>
+          <HotelProvider>
+            <SearchProvider>
+              <UserHotelStatsProvider>
+                <ApolloProvider client={client}>
+                  <QueryHotel />
+                </ApolloProvider>
+                <Switch>
+                  <Route path="/" component={Session} />
+                </Switch>
+                <FirebaseProvider>
+                  <Switch>
+                    <Route path="/login" component={LoginPage} />
+                    <Route path="/Register" component={Register} />
+                    <Route path="/PasswordReset" component={PasswordReset} />
+                    <Route path="/" component={Navi} />
+                  </Switch>
+                  <Switch>
+                    <Route path="/" exact component={MainPage} />
+                    <PrivateRoute path="/option" component={Option} />
+                    <PrivateRoute path="/compare" component={CompareContext} />
+                    <Route path="/c" component={MainPage} />
+                  </Switch>
+                </FirebaseProvider>
+              </UserHotelStatsProvider>
+            </SearchProvider>
+          </HotelProvider>
         </UserAuthProvider>
       </Router>
     </div>
