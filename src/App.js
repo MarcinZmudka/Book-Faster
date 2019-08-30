@@ -18,6 +18,8 @@ import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import { SearchProvider } from "./content/SearchContext";
 import QueryHotel from "./components/QueryHotels/QueryHotels";
+import { ClockProvider } from "./content/ClockContext";
+import ClockSetter from "./components/ClockSetter/ClockSetter";
 
 const client = new ApolloClient({
   uri: `http://localhost:4000/graphql`
@@ -27,6 +29,8 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <ClockProvider>
+          <ClockSetter/>
         <UserAuthProvider>
           <HotelProvider>
             <SearchProvider>
@@ -55,6 +59,7 @@ function App() {
             </SearchProvider>
           </HotelProvider>
         </UserAuthProvider>
+        </ClockProvider>
       </Router>
     </div>
   );

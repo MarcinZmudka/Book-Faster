@@ -5,6 +5,7 @@ import { SearchContext } from "../../content/SearchContext";
 import { UserHotelStatsContext } from "../../content/UserHotelStatsContext";
 import { HotelContext } from "../../content/HotelContext";
 import { UserAuthContext } from "../../content/UserAuthContext";
+import { ClockContext } from "../../content/ClockContext";
 
 const HotelQuery = gql`
   query Hotel(
@@ -24,7 +25,11 @@ const HotelQuery = gql`
   }
 `;
 const QueryHotels = () => {
-  const [{ name, place, interval, date }] = useContext(SearchContext);
+  const [clock] = useContext(ClockContext);
+  let [{ name, place, interval, date }] = useContext(SearchContext);
+  if(date === ""){
+    date = `${clock.year}-${clock.month}-${clock.day}`;
+  }
   const [, setUserHotelStats] = useContext(UserHotelStatsContext);
   const [userAuth, , userInfo] = useContext(UserAuthContext);
   const [, setHotel] = useContext(HotelContext);

@@ -4,12 +4,15 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import "./Filter.css";
 import { SearchContext } from "../../content/SearchContext";
+import { ClockContext } from "../../content/ClockContext";
 
 const Filter = () => {
+  const [clock] = useContext(ClockContext);
+  console.log(clock);
   const [name, setName] = useState("");
-  const [day, setDay] = useState("");
-  const [month, setMonth] = useState("");
-  const [year, setYear] = useState("");
+  const [day, setDay] = useState(clock.day);
+  const [month, setMonth] = useState(clock.month);
+  const [year, setYear] = useState(clock.year);
   const [interval, setInterval] = useState(0);
   const [place, setPlace] = useState("");
   const [error, setError] = useState("");
@@ -71,17 +74,18 @@ const Filter = () => {
   const clear = event => {
     event.preventDefault();
     setName("");
-    setDay("");
-    setMonth("");
-    setYear("");
+    setDay(clock.day);
+    setMonth(clock.month);
+    setYear(clock.year);
     setInterval(0);
     setPlace("");
     setSearchContext({
       name: "",
       place: "",
       interval: 0,
-      date: ""
+      date: `${clock.year}-${clock.month}-${clock.day}`
     });
+    console.log(`${clock.year}-${clock.month}-${clock.day}`);
     document.getElementById("myForm").reset();
   };
   return (
@@ -117,7 +121,7 @@ const Filter = () => {
         <Form.Label className="label">Data Przyjazdu</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" onChange={updateDay}>
+            <Form.Control as="select" onChange={updateDay} value={day}>
               <option value="">dzień</option>
               <option>1</option>
               <option>2</option>
@@ -153,7 +157,7 @@ const Filter = () => {
             </Form.Control>
           </Form.Group>
           <Form.Group as={Col} controlId="exampleForm.ControlSelect2">
-            <Form.Control as="select" onChange={updateMonth}>
+            <Form.Control as="select" onChange={updateMonth} value = {month}>
               <option value="">miesiąc</option>
               <option>1</option>
               <option>2</option>
@@ -172,7 +176,7 @@ const Filter = () => {
         </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="exampleForm.ControlSelect3">
-            <Form.Control as="select" onChange={updateYear}>
+            <Form.Control as="select" onChange={updateYear} value ={year}>
               <option value="">rok</option>
               <option>2019</option>
               <option>2020</option>

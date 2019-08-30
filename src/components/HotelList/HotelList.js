@@ -11,7 +11,7 @@ import "./HotelList.css";
 import Sorter from "../Sorter/Sorter";
 import UserHotel from "../UserHotel/UserHotel";
 import Pages from '../Pagination/Pagination';
-
+import NoHotel from "../NoHotel/NoHotel";
 
 class HotelList extends React.Component {
   constructor(props) {
@@ -81,11 +81,12 @@ class HotelList extends React.Component {
             <UserHotel />
             <Jumbotron className="m-0 p-1 data_field">
               <Description sort={this.sort} />
-              {this.state.displayedHotels
+              {console.log(this.state.displayedHotels)}
+              {this.state.displayedHotels.length > 0
                 ? this.state.displayedHotels.slice(this.state.indexOfFirst,this.state.indexOfLast).map(item => {
                     return <Hotel value={item} key={item.id} />;
                   })
-                : ""}
+                : <NoHotel/>}
             </Jumbotron>
             <Pages numberOfHotels = {this.state.displayedHotels.length} hotelPerPage = {10} changePage = {this.changePage} currentPage ={this.state.currentPage}/>
           </Col>

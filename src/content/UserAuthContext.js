@@ -5,7 +5,6 @@ export const UserAuthContext = createContext();
 export const UserAuthProvider = props => {
   const [userAuth, setUserAuth] = useState(false);
   const [ userInfo, setUserInfo ] = useState("pusto");
-  console.log("auth", userAuth);
   return (
     <UserAuthContext.Provider value={[userAuth, setUserAuth, userInfo, setUserInfo]}>
       {props.children}

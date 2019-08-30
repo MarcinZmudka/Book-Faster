@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { UserAuthContext } from "../../content/UserAuthContext";
 
 const Session = props => {
@@ -6,24 +6,20 @@ const Session = props => {
     UserAuthContext
   );
   const UserIsLogged = () => {
-    return userInfo != "pusto";
+    return userInfo !== "pusto";
   };
   const logUserFromStorage = () => {
     const user = JSON.parse(localStorage.getItem("booking-faster"));
     if (user !== null) {
       if (!userCrossedSession(user)) {
         setUserInfo(user);
-        setUserAuth(true);
-        setTimeout(() => {
-          props.history.push("/compare");
-        }, 50);
-        
+        setUserAuth(true);        
       }
     }
   };
   const userCrossedSession = user => {
     const date = -(new Date(user.startTimeOfSession) - new Date());
-    const int = parseInt(date) / (1000*60*60);
+    const int = parseInt(date) / (10000*60*60);
     console.log("int", int, int > 1);
     return int > 1;
   };

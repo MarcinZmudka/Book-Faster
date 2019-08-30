@@ -5,6 +5,7 @@ import { FirebaseContext } from "./../../content/FirebaseContext";
 import { UserAuthContext } from "./../../content/UserAuthContext";
 import "./css/Login.css";
 import Register_engine from "./Register_engine";
+import { ClockContext } from "../../content/ClockContext";
 
 const Register = props => {
   const [name, setName] = useState("");
@@ -15,6 +16,7 @@ const Register = props => {
   const [place, setPlace] = useState("");
   const [error, setError] = useState(0);
   const [, setUserAuth, , setUserInfo] = useContext(UserAuthContext);
+  const [clock] = useContext(ClockContext);
   const firebase = useContext(FirebaseContext);
 
   const updateEmail = event => {
@@ -83,6 +85,7 @@ const Register = props => {
           password: password1,
           hotel: hotel,
           place: place,
+          valid_date: `${clock.year}-${clock.month}-${clock.day}`,
           setError: setError,
           setUserAuth: setUserAuth,
           setUserInfo: setUserInfo,
