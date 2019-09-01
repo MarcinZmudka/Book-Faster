@@ -13,14 +13,16 @@ const Session = props => {
     if (user !== null) {
       if (!userCrossedSession(user)) {
         setUserInfo(user);
-        setUserAuth(true);        
+        setUserAuth(true);   
+        setTimeout(() => {
+          props.history.push("/compare");   
+        }, 50);   
       }
     }
   };
   const userCrossedSession = user => {
-    const date = -(new Date(user.startTimeOfSession) - new Date());
-    const int = parseInt(date) / (10000*60*60);
-    console.log("int", int, int > 1);
+    const date = -(new Date(user.startTimeOfSession) - new Date()); //1h = 3 600 000 ms
+    const int = parseInt(date) / (1000*60*60);
     return int > 1;
   };
   if (UserIsLogged()) {

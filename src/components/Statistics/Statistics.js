@@ -1,59 +1,69 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./Statistics.css";
-
 const Statistic = props => {
-  const averagePrice = updateAveragePrice(props.hotels);;
+  const averagePrice = updateAveragePrice(props.hotels);
   const numberOfHotels = updateNumberOfHotels(props.hotels);
   const minPrice = updateMinPrice(props.hotels);
   const maxPrice = updateMaxPrice(props.hotels);
   const pricePerNight = updatePricePerNigth(props.hotels, averagePrice);
-
+  const HideFilter = () => {
+    if (document.getElementById("Stats").style.display == "none") {
+      document.getElementById("Stats").style.display = "block";
+    } else {
+      document.getElementById("Stats").style.display = "none";
+    }
+  };
   return (
-    <Container className="text-left">
-      <Row className="my-3 mx-1 row_number">
-        <Col lg={8} className="stat_desc p-0">
-          Średnia cena:{" "}
-        </Col>
-        <Col lg={4} className="numbers p-0">
-          {averagePrice}
-        </Col>
-      </Row>
-      <Row className="my-3 mx-1 row_number">
-        <Col lg={8} className="stat_desc p-0">
-          Liczba obiektów:{" "}
-        </Col>
-        <Col lg={4} className="numbers  p-0">
-          {numberOfHotels}
-        </Col>
-      </Row>
-      <Row className="my-3 mx-1 row_number">
-        <Col lg={8} className="stat_desc p-0">
-          Cena najmniejsza:{" "}
-        </Col>
-        <Col lg={4} className="numbers p-0">
-          {minPrice}
-        </Col>
-      </Row>
-      <Row className="my-3 mx-1 row_number">
-        <Col lg={8} className="stat_desc p-0">
-          Cena największa:{" "}
-        </Col>
-        <Col lg={4} className="numbers p-0">
-          {maxPrice}
-        </Col>
-      </Row>
-      <Row className="my-3 mx-1 row_number">
-        <Col lg={8} className="stat_desc p-0">
-          Cena za noc:{" "}
-        </Col>
-        <Col lg={4} className="numbers p-0">
-          {pricePerNight}
-        </Col>
-      </Row>
-    </Container>
+    <Fragment>
+      <button className="Filter_closeClick" onClick={HideFilter}>
+        <i className="far fa-caret-square-right Filter_close"></i>
+      </button>
+      <Container className="text-left" id="Stats">
+        <Row className="my-3 mx-1 row_number">
+          <Col lg={8} className="stat_desc p-0">
+            Średnia cena:{" "}
+          </Col>
+          <Col lg={4} className="numbers p-0">
+            {averagePrice}
+          </Col>
+        </Row>
+        <Row className="my-3 mx-1 row_number">
+          <Col lg={8} className="stat_desc p-0">
+            Liczba obiektów:{" "}
+          </Col>
+          <Col lg={4} className="numbers  p-0">
+            {numberOfHotels}
+          </Col>
+        </Row>
+        <Row className="my-3 mx-1 row_number">
+          <Col lg={8} className="stat_desc p-0">
+            Cena najmniejsza:{" "}
+          </Col>
+          <Col lg={4} className="numbers p-0">
+            {minPrice}
+          </Col>
+        </Row>
+        <Row className="my-3 mx-1 row_number">
+          <Col lg={8} className="stat_desc p-0">
+            Cena największa:{" "}
+          </Col>
+          <Col lg={4} className="numbers p-0">
+            {maxPrice}
+          </Col>
+        </Row>
+        <Row className="my-3 mx-1 row_number">
+          <Col lg={8} className="stat_desc p-0">
+            Cena za noc:{" "}
+          </Col>
+          <Col lg={4} className="numbers p-0">
+            {pricePerNight}
+          </Col>
+        </Row>
+      </Container>
+    </Fragment>
   );
 };
 const updateAveragePrice = hotels => {

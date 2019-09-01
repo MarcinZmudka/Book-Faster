@@ -2,6 +2,7 @@ import React, { useState, useContext, Fragment, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import "./Filter.css";
 import { SearchContext } from "../../content/SearchContext";
 import { ClockContext } from "../../content/ClockContext";
@@ -16,6 +17,7 @@ const Filter = () => {
   const [interval, setInterval] = useState(0);
   const [place, setPlace] = useState("");
   const [error, setError] = useState("");
+  const [hotelData, setHotelData] = useState("");
   const [, setSearchContext] = useContext(SearchContext);
   const updateName = event => {
     const name = event.target.value;
@@ -41,6 +43,10 @@ const Filter = () => {
     const interval = parseInt(event.target.value);
     setInterval(interval);
   };
+  const updateHotelData = event =>{
+    const value = event.target.value;
+    setHotelData(value);
+  } 
   const isDateFormEmpty = () => {
     if (day == "" && month == "" && year == "") {
       return false;
@@ -83,13 +89,23 @@ const Filter = () => {
       name: "",
       place: "",
       interval: 0,
-      date: `${clock.year}-${clock.month}-${clock.day}`
+      date: `${clock.year}-${clock.month}-${clock.day}`,
+      hotelType: hotelData
     });
-    console.log(`${clock.year}-${clock.month}-${clock.day}`);
     document.getElementById("myForm").reset();
   };
+  const HideFilter = (event) => {
+    if(document.getElementById("myForm").style.display == "none"){
+      document.getElementById("myForm").style.display = "block";
+    }else{
+      document.getElementById("myForm").style.display = "none";
+    }
+  }
   return (
     <Fragment>
+      <button className="Filter_closeClick" onClick={HideFilter}>
+        <i className="far fa-caret-square-right Filter_close"></i>
+      </button>
       <Form id="myForm" onSubmit={search}>
         <p className="error_filter">{error != "" ? error : null}</p>
         <Form.Group controlId="formBasicEmail">
@@ -157,7 +173,7 @@ const Filter = () => {
             </Form.Control>
           </Form.Group>
           <Form.Group as={Col} controlId="exampleForm.ControlSelect2">
-            <Form.Control as="select" onChange={updateMonth} value = {month}>
+            <Form.Control as="select" onChange={updateMonth} value={month}>
               <option value="">miesiąc</option>
               <option>1</option>
               <option>2</option>
@@ -176,7 +192,7 @@ const Filter = () => {
         </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="exampleForm.ControlSelect3">
-            <Form.Control as="select" onChange={updateYear} value ={year}>
+            <Form.Control as="select" onChange={updateYear} value={year}>
               <option value="">rok</option>
               <option>2019</option>
               <option>2020</option>
@@ -196,6 +212,48 @@ const Filter = () => {
             <option>8</option>
           </Form.Control>
         </Form.Group>
+        <fieldset>
+        <Form.Label className="label">Typ obiektu</Form.Label>
+          <Form.Group as={Row}>
+            <Col sm={6}>
+              {[
+                ["Apartamenty", "201"],
+                ["Hotele", "204"],
+                ["Pensjonaty", "216"],
+                ["Pensjonaty B&B", "208"],
+                ["Hostele", "203"],
+                ["Domy Wakacyjne", "220"]
+              ].map(item => (
+                <Form.Check
+                  className="Filter_radioButton"
+                  type="radio"
+                  label={item[0]}
+                  name="radioButton"
+                  id={item[1]}
+                  onChange={updateHotelData}
+                />
+              ))}
+            </Col>
+            <Col sm={6}>
+              {[
+                ["Kwatery Prywatne", "222"],
+                ["Kempingi", "214"],
+                ["Motele", "205"],
+                ["Gospodarstwa Agroturystyczne", "210"],
+                ["Wille", "213"]
+              ].map(item => (
+                <Form.Check
+                  className="Filter_radioButton"
+                  type="radio"
+                  label={item[0]}
+                  name="radioButton"
+                  id={item[1]}
+                  onChange={updateHotelData}
+                />
+              ))}
+            </Col>
+          </Form.Group>
+        </fieldset>
         <Form.Row>
           <Form.Group as={Col}>
             <Button variant="primary" type="submit" className="button">
