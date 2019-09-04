@@ -22,7 +22,12 @@
     transform: rotate(90deg);
     font-size: 1.5vw;
 }
-
+@media (min-width: 900px){
+    .Filter_close{
+        transform: rotate(90deg);
+        font-size: 20px;
+    }
+}
 .label{
     font-family: 'Roboto Slab', serif;
 }

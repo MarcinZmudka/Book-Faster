@@ -1,8 +1,29 @@
 .data_field {
   border-radius: 10px;
+  width: 100%;
 }
 .filter_jumbotron, .data_field, .statistic_jumbotron {
-    background: rgb(248, 248, 248);
+  background: rgb(248, 248, 248);
 }
+/* @media (min-width: 1900px){
+  .date_field_box{
+    width: 90vw;
+    transform: translateX(-19%);
+    transition: transform .6s ease-in-out;
+  }
+
+  .filter_and_statistics {
+    transform: translateX(-80%);
+    transition: transform .6s ease-in-out;
+    z-index: 100;
+  }
+  .filter_and_statistics:hover {
+    transform: translateX(0);
+  }
+  .filter_and_statistics:hover ~.date_field_box{
+    transform: translateX(0);
+    width: 75vw;
+  }
+} */
 
 /*#bc00c2*/

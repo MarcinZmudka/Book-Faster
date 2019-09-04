@@ -13,20 +13,30 @@ const HotelQuery = gql`
     $place: String!
     $date: String!
     $interval: Int!
+    $accommodation_type: Int!
+    $numberOfGuest: String!
   ) {
-    hotel(name: $name, place: $place, arrival: $date, interval: $interval) {
+    hotel(name: $name, place: $place, arrival: $date, interval: $interval, accommodation_type: $accommodation_type, numberOfGuest: $numberOfGuest) {
       name
       arrival
       depart
       place
       price
       interval
+      accommodation_type
+      numberOfGueast
     }
   }
 `;
+/*    
+      accommodation_type
+      numberOfGueast
+      , accommodation_type: $accommodation_type, numberOfGueast: $numberOfGuest 
+      
+      */
 const QueryHotels = () => {
   const [clock] = useContext(ClockContext);
-  let [{ name, place, interval, date }] = useContext(SearchContext);
+  let [{ name, place, interval, date, accommodation_type, numberOfGuest }] = useContext(SearchContext);
   if(date === ""){
     date = `${clock.year}-${clock.month}-${clock.day}`;
   }
@@ -34,7 +44,7 @@ const QueryHotels = () => {
   const [userAuth, , userInfo] = useContext(UserAuthContext);
   const [, setHotel] = useContext(HotelContext);
   const { loading, error, data } = useQuery(HotelQuery, {
-    variables: { name, place, date, interval }
+    variables: { name, place, date, interval, accommodation_type, numberOfGuest }
   });
 
   useEffect(() => {
@@ -43,7 +53,7 @@ const QueryHotels = () => {
       setHotel(displayHotels[0]);
       setUserHotelStats(displayHotels[1]);
     }
-  }, [name, place, interval, date, data]);
+  }, [name, place, interval, date, data, accommodation_type, numberOfGuest ]);
 
   return <div></div>;
 };

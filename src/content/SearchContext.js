@@ -8,6 +8,8 @@ export const SearchProvider = props => {
     place: "",
     interval: 0,
     date: "",
+    accommodation_type: 0,
+    numberOfGuest: ""
   });
   return (
     <SearchContext.Provider value={[search, setSearch]}>

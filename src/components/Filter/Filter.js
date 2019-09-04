@@ -1,4 +1,4 @@
-import React, { useState, useContext, Fragment, useEffect } from "react";
+import React, { useState, useContext, Fragment } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -9,7 +9,6 @@ import { ClockContext } from "../../content/ClockContext";
 
 const Filter = () => {
   const [clock] = useContext(ClockContext);
-  console.log(clock);
   const [name, setName] = useState("");
   const [day, setDay] = useState(clock.day);
   const [month, setMonth] = useState(clock.month);
@@ -18,6 +17,7 @@ const Filter = () => {
   const [place, setPlace] = useState("");
   const [error, setError] = useState("");
   const [hotelData, setHotelData] = useState("");
+  const [numberOfGuest, setNumberOfGuest] = useState("2");
   const [, setSearchContext] = useContext(SearchContext);
   const updateName = event => {
     const name = event.target.value;
@@ -47,6 +47,10 @@ const Filter = () => {
     const value = event.target.value;
     setHotelData(value);
   } 
+  const updateGuest = event => {
+    const value = event.target.value;
+    setNumberOfGuest(value);
+  }
   const isDateFormEmpty = () => {
     if (day == "" && month == "" && year == "") {
       return false;
@@ -210,6 +214,13 @@ const Filter = () => {
             <option>6</option>
             <option>7</option>
             <option>8</option>
+          </Form.Control>
+        </Form.Group>
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label className="label">Liczba Gości</Form.Label>
+          <Form.Control as="select" onChange={updateGuest}> value={numberOfGuest}
+            <option>2</option>
+            <option>4</option>
           </Form.Control>
         </Form.Group>
         <fieldset>

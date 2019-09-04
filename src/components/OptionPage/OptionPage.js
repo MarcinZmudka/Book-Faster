@@ -45,38 +45,38 @@ const Option = () => {
       <Row>
         <Col className="d-none d-sm-block" />
         <Col className="a">
-          <p className = "option_note">{note ? note : ""}</p>
-          <p className="display_name">
+          <p className = "optionPage_option_note">{note ? note : ""}</p>
+          <p className="optionPage_display_name">
             Witaj, {userInfo !== undefined ? userInfo.name : ""}
           </p>
           <Form onSubmit={onSubmit}>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label className="label">Nazwa twojego obiektu</Form.Label>
+              <Form.Label className="optionPage_label">Nazwa twojego obiektu</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Nazwa twojego obiektu"
                 onChange={updateUserHotel}
                 value={hotel}
               />
-              <Form.Text className="undername">
+              <Form.Text className="optionPage_undername">
                 Wpisz nazwę swojego obiektu tutaj, dzięki temu będzie wyróżniany
                 przy wynikach wyszukiwania.
               </Form.Text>
             </Form.Group>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label className="label">Miejscowość</Form.Label>
+              <Form.Label className="optionPage_label">Miejscowość</Form.Label>
               <Form.Control as="select" onChange={updatePlace} value={place}>
                 <option value="">Miejscowość</option>
                 <option>Białka Tatrzańska</option>
                 <option>Bukowina Tatrzańska</option>
                 <option>Zakopane</option>
               </Form.Control>
-              <Form.Text className="undername">
+              <Form.Text className="optionPage_undername">
                 W której znajduje się twój obiekt
               </Form.Text>
             </Form.Group>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label className="label">Twój Email</Form.Label>
+              <Form.Label className="optionPage_label">Twój Email</Form.Label>
               <Form.Control
                 type="text"
                 value={userInfo.login}
