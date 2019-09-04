@@ -1,0 +1,21 @@
+.optionPage_label{
+    font-family: 'Roboto Slab', serif;
+}
+.optionPage_underName{
+    font-size: 1rem;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+.optionPage_button{
+    width: 10rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.optionPage_display_name{
+    font-family: 'Roboto Slab', serif;
+    font-size: 3vh;
+    margin-top: 2vh; 
+}
+.optionPage_option_note{
+    margin-top: 1vw;
+    color: rgb(13, 104, 13);
+}

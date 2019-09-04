@@ -1,0 +1,23 @@
+.record{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+}
+.row_hotel{
+    position: relative;
+    transition: background-color .3s ease-in-out;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.container_hotel:hover{
+    background-color: #2a50ce62;
+    cursor: pointer;
+}
+.container_hotel{
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+/* .hotel_column{
+    border: 1px solid black;
+    height: 100%;
+} */

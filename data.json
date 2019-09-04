@@ -1,0 +1,2605 @@
+{
+  "hotels": [
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 0,
+      "interval": 3,
+      "name": "Apartamenty GÓRKA ",
+      "place": "Białka Tatrzańska ",
+      "price": 668
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 1,
+      "interval": 3,
+      "name": "Aparthotel Diamond SPA",
+      "place": "Białka Tatrzańska ",
+      "price": 573
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 2,
+      "interval": 3,
+      "name": "Aparthotel Góralski Spa",
+      "place": "Białka Tatrzańska ",
+      "price": 855
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 3,
+      "interval": 3,
+      "name": "Apartamenty Białczańskie ",
+      "place": "Białka Tatrzańska ",
+      "price": 324
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 4,
+      "interval": 3,
+      "name": "Amelia ",
+      "place": "Białka Tatrzańska ",
+      "price": 660
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 5,
+      "interval": 3,
+      "name": "Machajówka ",
+      "place": "Białka Tatrzańska ",
+      "price": 758
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 6,
+      "interval": 3,
+      "name": "Aparthotel Delta Białka ",
+      "place": "Białka Tatrzańska ",
+      "price": 720
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 7,
+      "interval": 3,
+      "name": "Apartamenty Bajka Białka Tatrzanska z Kuchnią ",
+      "place": "Białka Tatrzańska ",
+      "price": 838
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 8,
+      "interval": 3,
+      "name": "Apartament Klimek",
+      "place": "Białka Tatrzańska ",
+      "price": 900
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 9,
+      "interval": 3,
+      "name": "Apartament Cztery Pory Roku ",
+      "place": "Białka Tatrzańska ",
+      "price": 795
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 10,
+      "interval": 3,
+      "name": "Domki w Białce pod Termami ",
+      "place": "Białka Tatrzańska ",
+      "price": 1748
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 11,
+      "interval": 3,
+      "name": "Premium 6 ",
+      "place": "Białka Tatrzańska ",
+      "price": 730
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 12,
+      "interval": 3,
+      "name": "Apartamenty Kazimierz ",
+      "place": "Białka Tatrzańska ",
+      "price": 807
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 13,
+      "interval": 3,
+      "name": "Apartamenty Bialka Tatrzanska ",
+      "place": "Białka Tatrzańska ",
+      "price": 395
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 14,
+      "interval": 3,
+      "name": "Willa Pachówka ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 324
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 0,
+      "interval": 3,
+      "name": "Apartamenty GÓRKA ",
+      "place": "Białka Tatrzańska ",
+      "price": 668
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 1,
+      "interval": 3,
+      "name": "Aparthotel Diamond SPA",
+      "place": "Białka Tatrzańska ",
+      "price": 573
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 2,
+      "interval": 3,
+      "name": "Aparthotel Góralski Spa",
+      "place": "Białka Tatrzańska ",
+      "price": 855
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 3,
+      "interval": 3,
+      "name": "Apartamenty Białczańskie ",
+      "place": "Białka Tatrzańska ",
+      "price": 324
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 4,
+      "interval": 3,
+      "name": "Amelia ",
+      "place": "Białka Tatrzańska ",
+      "price": 660
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 5,
+      "interval": 3,
+      "name": "Machajówka ",
+      "place": "Białka Tatrzańska ",
+      "price": 758
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 6,
+      "interval": 3,
+      "name": "Aparthotel Delta Białka ",
+      "place": "Białka Tatrzańska ",
+      "price": 720
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 7,
+      "interval": 3,
+      "name": "Apartamenty Bajka Białka Tatrzanska z Kuchnią ",
+      "place": "Białka Tatrzańska ",
+      "price": 838
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 8,
+      "interval": 3,
+      "name": "Apartament Klimek",
+      "place": "Białka Tatrzańska ",
+      "price": 900
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 9,
+      "interval": 3,
+      "name": "Apartament Cztery Pory Roku ",
+      "place": "Białka Tatrzańska ",
+      "price": 795
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 10,
+      "interval": 3,
+      "name": "Domki w Białce pod Termami ",
+      "place": "Białka Tatrzańska ",
+      "price": 1748
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 11,
+      "interval": 3,
+      "name": "Premium 6 ",
+      "place": "Białka Tatrzańska ",
+      "price": 730
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 12,
+      "interval": 3,
+      "name": "Apartamenty Kazimierz ",
+      "place": "Białka Tatrzańska ",
+      "price": 807
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 13,
+      "interval": 3,
+      "name": "Apartamenty Bialka Tatrzanska ",
+      "place": "Białka Tatrzańska ",
+      "price": 395
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 14,
+      "interval": 3,
+      "name": "Willa Pachówka ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 324
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 15,
+      "interval": 3,
+      "name": "Apartamenty i pokoje rodzinne ",
+      "place": "Czarna Góra ",
+      "price": 360
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 16,
+      "interval": 3,
+      "name": "Willa Floryn ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 360
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 17,
+      "interval": 3,
+      "name": "Misia Łapa Apartamenty ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 668
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 18,
+      "interval": 3,
+      "name": "Willa Pod Grapą ",
+      "place": "Poronin ",
+      "price": 330
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 19,
+      "interval": 3,
+      "name": "Bukowiańska Ostoja ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 360
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 20,
+      "interval": 3,
+      "name": "Apartamenty- Mieszkania Wakacyjne ",
+      "place": "Czarna Góra ",
+      "price": 353
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 21,
+      "interval": 3,
+      "name": "Szarotka ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 480
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 22,
+      "interval": 3,
+      "name": "Apartamenty i Pokoje Gościnne ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 305
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 23,
+      "interval": 3,
+      "name": "Villa Kasper",
+      "place": "Szaflary ",
+      "price": 540
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 24,
+      "interval": 3,
+      "name": "Nowe Miejsce Brzegi ",
+      "place": "Brzegi ",
+      "price": 966
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 25,
+      "interval": 3,
+      "name": "Apartamenty u Piekorza ",
+      "place": "Szaflary ",
+      "price": 360
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 26,
+      "interval": 3,
+      "name": "ApartamentyPodZakopanem.PL ",
+      "place": "Murzasichle ",
+      "price": 630
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 27,
+      "interval": 3,
+      "name": "Chata Koziniec przy wyciągu ",
+      "place": "Czarna Góra ",
+      "price": 390
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 28,
+      "interval": 3,
+      "name": "Apartament Widok",
+      "place": "Czarna Góra ",
+      "price": 405
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 29,
+      "interval": 3,
+      "name": "Pałac Tatrzański Apartamenty ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 540
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 30,
+      "interval": 3,
+      "name": "Apartamenty nad Potokiem",
+      "place": "Leśnica ",
+      "price": 960
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 31,
+      "interval": 3,
+      "name": "Apartament na Szczycie ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 599
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 32,
+      "interval": 3,
+      "name": "Pałac Tatrzański-Apartament 206 ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 628
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 33,
+      "interval": 3,
+      "name": "Apartament na Wierchu ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 510
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 34,
+      "interval": 3,
+      "name": "Pałac Tatrzański Apartmenty ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 467
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 0,
+      "interval": 3,
+      "name": "Agro u Marka ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 750
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 1,
+      "interval": 3,
+      "name": "Pokoje i Apartamenty Góraleczka",
+      "place": "Czarna Góra ",
+      "price": 599
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 2,
+      "interval": 3,
+      "name": "Apartamenty Cicha Dolina ",
+      "place": "Jurgów ",
+      "price": 360
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 3,
+      "interval": 3,
+      "name": "Apartamenty Bukowina ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 480
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 4,
+      "interval": 3,
+      "name": "Willa Mnich",
+      "place": "Bukowina Tatrzańska ",
+      "price": 750
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 5,
+      "interval": 3,
+      "name": "Szara Gora ",
+      "place": "Groń ",
+      "price": 338
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 6,
+      "interval": 3,
+      "name": "5 Wierchów Apartamenty",
+      "place": "Bukowina Tatrzańska ",
+      "price": 443
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 7,
+      "interval": 3,
+      "name": "Apartament Gazdowski ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 360
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 8,
+      "interval": 3,
+      "name": "Pod Hawraniem ",
+      "place": "Jurgów ",
+      "price": 717
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 9,
+      "interval": 3,
+      "name": "Apartamenty w Jurgowie Świstokówka ",
+      "place": "Jurgów ",
+      "price": 660
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 10,
+      "interval": 3,
+      "name": "TatryTop Jurgów SKI ",
+      "place": "Jurgów ",
+      "price": 606
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 11,
+      "interval": 3,
+      "name": "Pokój Jurgów",
+      "place": "Jurgów ",
+      "price": 777
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 12,
+      "interval": 3,
+      "name": "Apartament u Gombosów",
+      "place": "Jurgów ",
+      "price": 450
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 13,
+      "interval": 3,
+      "name": "Domek pod Tatrami",
+      "place": "Jurgów ",
+      "price": 360
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 14,
+      "interval": 3,
+      "name": "Domek pod Tatrami",
+      "place": "Jurgów ",
+      "price": 626
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 15,
+      "interval": 3,
+      "name": "Domek pod Tatrami",
+      "place": "Jurgów ",
+      "price": 691
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 16,
+      "interval": 3,
+      "name": "Apartamenty Augustynówka ",
+      "place": "Brzegi ",
+      "price": 960
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 17,
+      "interval": 3,
+      "name": "Apartament Alfa ",
+      "place": "Jurgów ",
+      "price": 465
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 18,
+      "interval": 3,
+      "name": "U Siebie w Górach Apartamenty ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 863
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 19,
+      "interval": 3,
+      "name": "U Siebie w Gorach II ",
+      "place": "Bukowina Tatrzańska ",
+      "price": 807
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 20,
+      "interval": 3,
+      "name": "Chałupka Apartament/Pokoje ",
+      "place": "Nowa Biała ",
+      "price": 510
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 21,
+      "interval": 3,
+      "name": "Apartament U Janusz ",
+      "place": "Gronków ",
+      "price": 420
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 22,
+      "interval": 3,
+      "name": "Na polnej",
+      "place": "Krempachy ",
+      "price": 270
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 23,
+      "interval": 3,
+      "name": "Apartamenty Za Rzeką",
+      "place": "Biały Dunajec ",
+      "price": 810
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 24,
+      "interval": 3,
+      "name": "Apartament w Osadzie Podhalańskiej ",
+      "place": "Gliczarów ",
+      "price": 1183
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 25,
+      "interval": 3,
+      "name": "Apartament Glamour ",
+      "place": "Biały Dunajec ",
+      "price": 730
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 26,
+      "interval": 3,
+      "name": "Pokoje U ŚLIWIOKA ",
+      "place": "Szaflary ",
+      "price": 420
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 27,
+      "interval": 3,
+      "name": "Zajazd Gronków ",
+      "place": "Gronków ",
+      "price": 270
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 28,
+      "interval": 3,
+      "name": "Apartamenty Trojaki przy Termach ",
+      "place": "Bańska ",
+      "price": 750
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 29,
+      "interval": 3,
+      "name": "Apartamenty czarna perła",
+      "place": "Szaflary ",
+      "price": 690
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 30,
+      "interval": 3,
+      "name": "Górski Kryształ ",
+      "place": "Murzasichle ",
+      "price": 537
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 31,
+      "interval": 3,
+      "name": "Tatry DeLux ",
+      "place": "Murzasichle ",
+      "price": 750
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 32,
+      "interval": 3,
+      "name": "Apartament Murzasichle ",
+      "place": "Murzasichle ",
+      "price": 732
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 33,
+      "interval": 3,
+      "name": "Willa Misiaga Apartamenty ",
+      "place": "Murzasichle ",
+      "price": 600
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 34,
+      "interval": 3,
+      "name": "Apartament Hawrań Murzasichle ",
+      "place": "Murzasichle ",
+      "price": 780
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 0,
+      "interval": 3,
+      "name": "Domek pod Howyzem ",
+      "place": "Łapsze Niżne ",
+      "price": 689
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 1,
+      "interval": 3,
+      "name": "Willa Uroki Spisza ",
+      "place": "Łapsze Niżne ",
+      "price": 360
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 2,
+      "interval": 3,
+      "name": "Szostak Apartament",
+      "place": "Bańska Niżna ",
+      "price": 840
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 3,
+      "interval": 3,
+      "name": "Apartament Gorsky",
+      "place": "Poronin ",
+      "price": 1059
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 4,
+      "interval": 3,
+      "name": "Apartamenty u Natalii ",
+      "place": "Murzasichle ",
+      "price": 531
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 5,
+      "interval": 3,
+      "name": "Apartament Córuś",
+      "place": "Murzasichle ",
+      "price": 552
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 6,
+      "interval": 3,
+      "name": "Chałupka na szlaku Zacisze ",
+      "place": "Biały Dunajec ",
+      "price": 600
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 7,
+      "interval": 3,
+      "name": "GORSKI RESORT & SAUNARIUM ",
+      "place": "Poronin ",
+      "price": 549
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 8,
+      "interval": 3,
+      "name": "Apartamenty Smrek Poronin ",
+      "place": "Poronin ",
+      "price": 480
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 9,
+      "interval": 3,
+      "name": "Spiski Apartament ",
+      "place": "Łapsze Niżne ",
+      "price": 720
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 10,
+      "interval": 3,
+      "name": "U Szostaka ",
+      "place": "Bańska Wyżna ",
+      "price": 507
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 11,
+      "interval": 3,
+      "name": "Folk Resort Domki i Apartamenty ",
+      "place": "Murzasichle ",
+      "price": 900
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 12,
+      "interval": 3,
+      "name": "Biały Ślad ",
+      "place": "Poronin ",
+      "price": 600
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 13,
+      "interval": 3,
+      "name": "Apartament 132 ",
+      "place": "Poronin ",
+      "price": 780
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 14,
+      "interval": 3,
+      "name": "Apatramenty Baciarskie",
+      "place": "Poronin ",
+      "price": 1050
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 15,
+      "interval": 3,
+      "name": "Apartament Dana ",
+      "place": "Poronin ",
+      "price": 774
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 16,
+      "interval": 3,
+      "name": "Poronin Apartament ",
+      "place": "Poronin ",
+      "price": 912
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 17,
+      "interval": 3,
+      "name": "Apartamenty U Paliderki ",
+      "place": "Poronin ",
+      "price": 420
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 18,
+      "interval": 3,
+      "name": "Apartamenty Góralski DACH NAD GŁOWĄ ",
+      "place": "Poronin ",
+      "price": 441
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 19,
+      "interval": 3,
+      "name": "Apartamenty Na Przełaj ",
+      "place": "Poronin ",
+      "price": 539
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 20,
+      "interval": 3,
+      "name": "Apartamenty u Grażyny ",
+      "place": "Murzasichle ",
+      "price": 731
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 21,
+      "interval": 3,
+      "name": "Apartamenty Niezapominajka ",
+      "place": "Poronin ",
+      "price": 540
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 22,
+      "interval": 3,
+      "name": "Apartament Na Ogrodzie ",
+      "place": "Suche ",
+      "price": 390
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 23,
+      "interval": 3,
+      "name": "Aga ",
+      "place": "Suche ",
+      "price": 309
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 24,
+      "interval": 3,
+      "name": "Apartament u Pradziada",
+      "place": "Murzasichle ",
+      "price": 747
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 25,
+      "interval": 3,
+      "name": "Dom Rodzinny",
+      "place": "Ząb ",
+      "price": 369
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 26,
+      "interval": 3,
+      "name": "Apartament u Agnieszki",
+      "place": "Murzasichle ",
+      "price": 493
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 27,
+      "interval": 3,
+      "name": "Siuhajkowa Koliba ",
+      "place": "Poronin ",
+      "price": 387
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 28,
+      "interval": 3,
+      "name": "Apartament Kubanówka Zakopane",
+      "place": "Zakopane ",
+      "price": 849
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 29,
+      "interval": 3,
+      "name": "Tatrzańska Ostoja ",
+      "place": "Zakopane ",
+      "price": 732
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 30,
+      "interval": 3,
+      "name": "Apartament Maja Nowy Targ ",
+      "place": "Nowy Targ ",
+      "price": 450
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 31,
+      "interval": 3,
+      "name": "Apartament PREMIUM Blanka ",
+      "place": "Poronin ",
+      "price": 870
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 32,
+      "interval": 3,
+      "name": "Apartamenty Jędrol",
+      "place": "Poronin ",
+      "price": 884
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 33,
+      "interval": 3,
+      "name": "Apartamenty \"Zielony Zakątek\" Olcza Zakopane ",
+      "place": "Zakopane ",
+      "price": 492
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 34,
+      "interval": 3,
+      "name": "Apartament PREMIUM Inga ",
+      "place": "Poronin ",
+      "price": 696
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 0,
+      "interval": 3,
+      "name": "Apartament Perła Pienin ",
+      "place": "Dębno ",
+      "price": 360
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 1,
+      "interval": 3,
+      "name": "4U Apartments - Zakopane ",
+      "place": "Zakopane ",
+      "price": 834
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 2,
+      "interval": 3,
+      "name": "Village Lodge Sierockie",
+      "place": "Biały Dunajec ",
+      "price": 480
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 3,
+      "interval": 3,
+      "name": "Villa Dorota ",
+      "place": "Zakopane ",
+      "price": 878
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 4,
+      "interval": 3,
+      "name": "Family Apartments Zakopane ",
+      "place": "Zakopane ",
+      "price": 657
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 5,
+      "interval": 3,
+      "name": "Apartament U Janusza ",
+      "place": "Nowy Targ ",
+      "price": 330
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 6,
+      "interval": 3,
+      "name": "Apartamenty Willa Olsza",
+      "place": "Zakopane ",
+      "price": 807
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 7,
+      "interval": 3,
+      "name": "Villa Julia - apartamenty",
+      "place": "Biały Dunajec ",
+      "price": 600
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 8,
+      "interval": 3,
+      "name": "Apartament Miodowy",
+      "place": "Waksmund ",
+      "price": 451
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 9,
+      "interval": 3,
+      "name": "Apartament Folk&Dream Harenda Zakopane ",
+      "place": "Zakopane ",
+      "price": 756
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 10,
+      "interval": 3,
+      "name": "Apartament z kominkiem",
+      "place": "Zakopane ",
+      "price": 732
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 11,
+      "interval": 3,
+      "name": "Apartament Hrube ",
+      "place": "Zakopane ",
+      "price": 406
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 12,
+      "interval": 3,
+      "name": "Apartamenty Tradycja ",
+      "place": "Zakopane ",
+      "price": 822
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 13,
+      "interval": 3,
+      "name": "Apartament Stanisława",
+      "place": "Zakopane ",
+      "price": 342
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 14,
+      "interval": 3,
+      "name": "Apartment Lovers",
+      "place": "Zakopane ",
+      "price": 540
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 15,
+      "interval": 3,
+      "name": "Apartament Zakopane",
+      "place": "Zakopane ",
+      "price": 522
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 16,
+      "interval": 3,
+      "name": "Sunny Apartment VisitZakopane",
+      "place": "Zakopane ",
+      "price": 729
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 17,
+      "interval": 3,
+      "name": "Olcza Apartment VisitZakopane ",
+      "place": "Zakopane ",
+      "price": 729
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 18,
+      "interval": 3,
+      "name": "Apartamenty Sun & Snow Poronin ",
+      "place": "Zakopane ",
+      "price": 656
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 19,
+      "interval": 3,
+      "name": "Apartament u Barona ",
+      "place": "Zakopane ",
+      "price": 650
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 20,
+      "interval": 3,
+      "name": "Chamonix Style Apartment ",
+      "place": "Zakopane ",
+      "price": 762
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 21,
+      "interval": 3,
+      "name": "Rent like home - Apartament Wojdyły ",
+      "place": "Zakopane ",
+      "price": 648
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 22,
+      "interval": 3,
+      "name": "Apartament Brylantowy Zakopane",
+      "place": "Zakopane ",
+      "price": 898
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 23,
+      "interval": 3,
+      "name": "Hrube 5 ",
+      "place": "Zakopane ",
+      "price": 614
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 24,
+      "interval": 3,
+      "name": "Apartament Rodzinny ",
+      "place": "Poronin ",
+      "price": 756
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 25,
+      "interval": 3,
+      "name": "Apartament Olcza ",
+      "place": "Poronin ",
+      "price": 583
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 26,
+      "interval": 3,
+      "name": "Apartamenty na Podhalu",
+      "place": "Nowy Targ ",
+      "price": 660
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 27,
+      "interval": 3,
+      "name": "Apartament Sokola Skała",
+      "place": "Falsztyn ",
+      "price": 776
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 28,
+      "interval": 3,
+      "name": "Apartamenty Toporowa Cyrhla ",
+      "place": "Zakopane ",
+      "price": 480
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 29,
+      "interval": 3,
+      "name": "Apartaments Gory ",
+      "place": "Niedzica-Zamek ",
+      "price": 510
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 30,
+      "interval": 3,
+      "name": "Apartament M5 Zakopane ",
+      "place": "Zakopane ",
+      "price": 630
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 31,
+      "interval": 3,
+      "name": "Apartament Rodzinny ",
+      "place": "Nowy Targ ",
+      "price": 300
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 32,
+      "interval": 3,
+      "name": "Apartament Panorama ",
+      "place": "Zakopane ",
+      "price": 805
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 33,
+      "interval": 3,
+      "name": "Apartament Oliwkowy ",
+      "place": "Zakopane ",
+      "price": 789
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 34,
+      "interval": 3,
+      "name": "Willa Baśka ",
+      "place": "Zakopane ",
+      "price": 540
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 0,
+      "interval": 3,
+      "name": "Apartament w Górach ",
+      "place": "Nowy Targ ",
+      "price": 630
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 1,
+      "interval": 3,
+      "name": "Apartamenty ROZETA ",
+      "place": "Zakopane ",
+      "price": 447
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 2,
+      "interval": 3,
+      "name": "Apartament Zacisze Tatr ",
+      "place": "Zakopane ",
+      "price": 912
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 3,
+      "interval": 3,
+      "name": "Holiday Home Krzysztoforow ",
+      "place": "Zakopane ",
+      "price": 462
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 4,
+      "interval": 3,
+      "name": "Apartament w Stolicy Podhala",
+      "place": "Nowy Targ ",
+      "price": 504
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 5,
+      "interval": 3,
+      "name": "Rent like home - Apartamenty Cyrhla ",
+      "place": "Zakopane ",
+      "price": 742
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 6,
+      "interval": 3,
+      "name": "Apartamenty u Huberta",
+      "place": "Nowy Targ ",
+      "price": 707
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 7,
+      "interval": 3,
+      "name": "28e Cyrhla Apartamenty widokowe \"u Homera\"",
+      "place": "Zakopane ",
+      "price": 762
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 8,
+      "interval": 3,
+      "name": "Robin Hood Apartment VisitZakopane",
+      "place": "Zakopane ",
+      "price": 819
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 9,
+      "interval": 3,
+      "name": "Rent like home - Podrazówka Osada Góralska ",
+      "place": "Zakopane ",
+      "price": 1519
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 10,
+      "interval": 3,
+      "name": "Antonina Apartment VisitZakopane ",
+      "place": "Zakopane ",
+      "price": 819
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 11,
+      "interval": 3,
+      "name": "Apartament Kolodziej",
+      "place": "Zakopane ",
+      "price": 789
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 12,
+      "interval": 3,
+      "name": "Tulip Apartment VisitZakopane ",
+      "place": "Zakopane ",
+      "price": 849
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 13,
+      "interval": 3,
+      "name": "Apartament Malowany Konik",
+      "place": "Zakopane ",
+      "price": 417
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 14,
+      "interval": 3,
+      "name": "Apartament góralski na Galicówce",
+      "place": "Zakopane ",
+      "price": 732
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 15,
+      "interval": 3,
+      "name": "Willa Basia",
+      "place": "Zakopane ",
+      "price": 972
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 16,
+      "interval": 3,
+      "name": "Apartment Tiffany",
+      "place": "Nowe Bystre ",
+      "price": 1010
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 17,
+      "interval": 3,
+      "name": "Apartamenty Pereskocki ",
+      "place": "Zakopane ",
+      "price": 774
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 18,
+      "interval": 3,
+      "name": "RentPlanet - Willa Szafran ",
+      "place": "Zakopane ",
+      "price": 524
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 19,
+      "interval": 3,
+      "name": "Willa Azja SPA & Wellness ",
+      "place": "Zakopane ",
+      "price": 507
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 20,
+      "interval": 3,
+      "name": "Apartamenty Bella Vista ",
+      "place": "Zakopane ",
+      "price": 672
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 21,
+      "interval": 3,
+      "name": "Apartament M9 - Zakopane ",
+      "place": "Zakopane ",
+      "price": 642
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 22,
+      "interval": 3,
+      "name": "Apartament Stary Mlyn ",
+      "place": "Zakopane ",
+      "price": 492
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 23,
+      "interval": 3,
+      "name": "Gościniec u Bobaków ",
+      "place": "Ząb ",
+      "price": 759
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 24,
+      "interval": 3,
+      "name": "Apartament z kogutem ",
+      "place": "Zakopane ",
+      "price": 800
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 25,
+      "interval": 3,
+      "name": "Apartamenty Tatra Visit Zakopane ",
+      "place": "Zakopane ",
+      "price": 759
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 26,
+      "interval": 3,
+      "name": "Apartamenty Pienińskie Owieczki ",
+      "place": "Niedzica-Zamek ",
+      "price": 420
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 27,
+      "interval": 3,
+      "name": "Apartament Ceprówka ",
+      "place": "Zakopane ",
+      "price": 760
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 28,
+      "interval": 3,
+      "name": "Willa Frajda ",
+      "place": "Zakopane ",
+      "price": 480
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 29,
+      "interval": 3,
+      "name": "Apartamenty Zielona Owieczka ",
+      "place": "Niedzica-Zamek ",
+      "price": 390
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 30,
+      "interval": 3,
+      "name": "Apartamenty Bellavista",
+      "place": "Maniowy ",
+      "price": 610
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 31,
+      "interval": 3,
+      "name": "Apartamenty JSZI ",
+      "place": "Zakopane ",
+      "price": 421
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 32,
+      "interval": 3,
+      "name": "Apartament Grande Zakopane ",
+      "place": "Zakopane ",
+      "price": 1475
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 33,
+      "interval": 3,
+      "name": "Cubrynka ",
+      "place": "Zakopane ",
+      "price": 702
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 34,
+      "interval": 3,
+      "name": "Apartament Lilia Ogrody Gorskie ",
+      "place": "Zakopane ",
+      "price": 972
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 0,
+      "interval": 3,
+      "name": "Zakopiańskie Zacisze ",
+      "place": "Zakopane ",
+      "price": 444
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 1,
+      "interval": 3,
+      "name": "APARTAMENTY MACIEJKA ",
+      "place": "Zakopane ",
+      "price": 471
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 2,
+      "interval": 3,
+      "name": "Apartamenty Viva Tatry ",
+      "place": "Zakopane ",
+      "price": 510
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 3,
+      "interval": 3,
+      "name": "Szklane Domy ",
+      "place": "Zakopane ",
+      "price": 639
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 4,
+      "interval": 3,
+      "name": "Cubryna ",
+      "place": "Zakopane ",
+      "price": 582
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 5,
+      "interval": 3,
+      "name": "Apartament Ogrody Górskie ",
+      "place": "Zakopane ",
+      "price": 1102
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 6,
+      "interval": 3,
+      "name": "Apartamenty Forma Tatrica ",
+      "place": "Zakopane ",
+      "price": 713
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 7,
+      "interval": 3,
+      "name": "Apartament Leśny ",
+      "place": "Zakopane ",
+      "price": 972
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 8,
+      "interval": 3,
+      "name": "Apartament Boruta ",
+      "place": "Zakopane ",
+      "price": 707
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 9,
+      "interval": 3,
+      "name": "Willa u Bohuna ",
+      "place": "Zakopane ",
+      "price": 621
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 10,
+      "interval": 3,
+      "name": "Apart-Center Ogrody Górskie ",
+      "place": "Zakopane ",
+      "price": 594
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 11,
+      "interval": 3,
+      "name": "Domki u Kromki ",
+      "place": "Kacwin ",
+      "price": 600
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 12,
+      "interval": 3,
+      "name": "1010 m n.p.m",
+      "place": "Ząb ",
+      "price": 572
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 13,
+      "interval": 3,
+      "name": "U Klisia ",
+      "place": "Ząb ",
+      "price": 456
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 14,
+      "interval": 3,
+      "name": "Apartament Pardałówka Zakopane",
+      "place": "Zakopane ",
+      "price": 762
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 15,
+      "interval": 3,
+      "name": "Apartament Zielone Studio",
+      "place": "Zakopane ",
+      "price": 522
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 16,
+      "interval": 3,
+      "name": "Ciągówka 19 a ",
+      "place": "Zakopane ",
+      "price": 852
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 17,
+      "interval": 3,
+      "name": "Domek pod Antałówką ",
+      "place": "Zakopane ",
+      "price": 672
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 18,
+      "interval": 3,
+      "name": "Apartament Wysoka Zakopane ",
+      "place": "Zakopane ",
+      "price": 972
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 19,
+      "interval": 3,
+      "name": "Apartament Zuzia ",
+      "place": "Zakopane ",
+      "price": 552
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 20,
+      "interval": 3,
+      "name": "Paris Apartment VisitZakopane",
+      "place": "Zakopane ",
+      "price": 909
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 21,
+      "interval": 3,
+      "name": "Rent like home - Apartament Pardałówka 4",
+      "place": "Zakopane ",
+      "price": 896
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 22,
+      "interval": 3,
+      "name": "Apartamenty Rohatka ",
+      "place": "Zakopane ",
+      "price": 592
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 23,
+      "interval": 3,
+      "name": "Apartament Kama ",
+      "place": "Zakopane ",
+      "price": 648
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 24,
+      "interval": 3,
+      "name": "Rent like home - Apartament Szklane domy ",
+      "place": "Zakopane ",
+      "price": 671
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 25,
+      "interval": 3,
+      "name": "Apartament Radosna Zakopane ",
+      "place": "Zakopane ",
+      "price": 747
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 26,
+      "interval": 3,
+      "name": "Kasprowy Wierch ",
+      "place": "Zakopane ",
+      "price": 732
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 27,
+      "interval": 3,
+      "name": "Apartament Rose Zakopane",
+      "place": "Zakopane ",
+      "price": 682
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 28,
+      "interval": 3,
+      "name": "Apartamenty nad Potokiem Aneta Burliga ",
+      "place": "Zakopane ",
+      "price": 423
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 29,
+      "interval": 3,
+      "name": "Mount Everest Apartment VisitZakopane ",
+      "place": "Zakopane ",
+      "price": 909
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 30,
+      "interval": 3,
+      "name": "Apartment 26 - StayLikeHome ",
+      "place": "Zakopane ",
+      "price": 936
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 31,
+      "interval": 3,
+      "name": "Apartamenty Dwa Widoki",
+      "place": "Ząb ",
+      "price": 1569
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 32,
+      "interval": 3,
+      "name": "Apartament pod Antałówką Zakopane ",
+      "place": "Zakopane ",
+      "price": 747
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 33,
+      "interval": 3,
+      "name": "Gerlach ",
+      "place": "Zakopane ",
+      "price": 624
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 34,
+      "interval": 3,
+      "name": "Apartament Wierchy",
+      "place": "Zakopane ",
+      "price": 950
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 0,
+      "interval": 3,
+      "name": "Apartament Peti Zakopane ",
+      "place": "Zakopane ",
+      "price": 582
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 1,
+      "interval": 3,
+      "name": "Akacja Apartment VisitZakopane ",
+      "place": "Zakopane ",
+      "price": 909
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 2,
+      "interval": 3,
+      "name": "Apartament Panoramic",
+      "place": "Zakopane ",
+      "price": 925
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 3,
+      "interval": 3,
+      "name": "Rent like home - Apartament Stroma ",
+      "place": "Zakopane ",
+      "price": 1045
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 4,
+      "interval": 3,
+      "name": "Cristal Apartment VisitZakopane ",
+      "place": "Zakopane ",
+      "price": 729
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 5,
+      "interval": 3,
+      "name": "Apartament Podwika ",
+      "place": "Zakopane ",
+      "price": 1062
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 6,
+      "interval": 3,
+      "name": "Apartament Furmanowa ",
+      "place": "Zakopane ",
+      "price": 2652
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 7,
+      "interval": 3,
+      "name": "Rent like home Apartament Pardałówka III ",
+      "place": "Zakopane ",
+      "price": 1054
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 8,
+      "interval": 3,
+      "name": "GóraLove Mieszkanie w Górach Mountain Apartment",
+      "place": "Nowy Targ ",
+      "price": 960
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 9,
+      "interval": 3,
+      "name": "Rent like home - Apartament Kasprowicza III ",
+      "place": "Zakopane ",
+      "price": 975
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 10,
+      "interval": 3,
+      "name": "Conrad Apartment",
+      "place": "Zakopane ",
+      "price": 1272
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 11,
+      "interval": 3,
+      "name": "Apartament Kosista",
+      "place": "Zakopane ",
+      "price": 876
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 12,
+      "interval": 3,
+      "name": "Szarotka Apartment VisitZakopane ",
+      "place": "Zakopane ",
+      "price": 909
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 13,
+      "interval": 3,
+      "name": "Domek pod Majową Górą",
+      "place": "Kacwin ",
+      "price": 576
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 14,
+      "interval": 3,
+      "name": "Zielony domek",
+      "place": "Czerwienne ",
+      "price": 480
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 15,
+      "interval": 3,
+      "name": "Zakoart Apartament I ",
+      "place": "Zakopane ",
+      "price": 1174
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 16,
+      "interval": 3,
+      "name": "VIP Apartamenty Szklane Domy The View ",
+      "place": "Zakopane ",
+      "price": 729
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 17,
+      "interval": 3,
+      "name": "Apartament ALVA ",
+      "place": "Zakopane ",
+      "price": 817
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 18,
+      "interval": 3,
+      "name": "MSC Apartments Honeysun ",
+      "place": "Zakopane ",
+      "price": 406
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 19,
+      "interval": 3,
+      "name": "Zacisze Kasprowicza ",
+      "place": "Zakopane ",
+      "price": 747
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 20,
+      "interval": 3,
+      "name": "Apartament Ceprówka I ",
+      "place": "Zakopane ",
+      "price": 735
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 21,
+      "interval": 3,
+      "name": "Apartamenty \"Pod Tatrami\"",
+      "place": "Zakopane ",
+      "price": 540
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 22,
+      "interval": 3,
+      "name": "Apartament De Lux Cicha Woda ",
+      "place": "Zakopane ",
+      "price": 951
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 23,
+      "interval": 3,
+      "name": "Rysy Apartment VisitZakopane ",
+      "place": "Zakopane ",
+      "price": 612
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 24,
+      "interval": 3,
+      "name": "MSC Apartments Honeymoon 2 ",
+      "place": "Zakopane ",
+      "price": 420
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 25,
+      "interval": 3,
+      "name": "udanypobyt Apartament 5 Gruszek ",
+      "place": "Zakopane ",
+      "price": 1099
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 26,
+      "interval": 3,
+      "name": "Apart-Center Makuszyńskiego ",
+      "place": "Zakopane ",
+      "price": 1005
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 27,
+      "interval": 3,
+      "name": "Domek Bachledówka Zakopane ",
+      "place": "Zakopane ",
+      "price": 1427
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 28,
+      "interval": 3,
+      "name": "ZAKOgiewont ",
+      "place": "Zakopane ",
+      "price": 660
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 29,
+      "interval": 3,
+      "name": "Apartamenty Tatrzańskie Turnie Pardałówka ",
+      "place": "Zakopane ",
+      "price": 924
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 30,
+      "interval": 3,
+      "name": "MSC Apartments Honeymoon ",
+      "place": "Zakopane ",
+      "price": 444
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 31,
+      "interval": 3,
+      "name": "Rent like home - Apartament Pardałówka ",
+      "place": "Zakopane ",
+      "price": 744
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 32,
+      "interval": 3,
+      "name": "Odkryj-Zakopane Apartament Komfort ",
+      "place": "Zakopane ",
+      "price": 882
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 33,
+      "interval": 3,
+      "name": "Apartament Kasprowicza ",
+      "place": "Zakopane ",
+      "price": 782
+    },
+    {
+      "arrival": "2019-9-23",
+       
+      "depart": "2019-9-26",
+      "id": 34,
+      "interval": 3,
+      "name": "Apartament studio ",
+      "place": "Zakopane ",
+      "price": 600
+    }
+  ]
+  
+}

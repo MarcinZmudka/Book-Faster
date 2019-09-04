@@ -1,0 +1,63 @@
+#myForm{
+    font-size: 1.2em;
+    position: relative;
+    display: block;
+}
+.Filter_closeClick{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    top: 0;
+    left: 50%;
+    background: rgba(0,0,0,0);
+}
+.Filter_closeClick:active,
+.Filter_closeClick:focus,
+.Filter_closeClick:focus:active {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
+}
+.Filter_close{
+    transform: rotate(90deg);
+    font-size: 1.5vw;
+}
+@media (min-width: 900px){
+    .Filter_close{
+        transform: rotate(90deg);
+        font-size: 20px;
+    }
+}
+.Filter_label{
+    font-family: 'Roboto Slab', serif;
+    
+}
+.Filter_underName{
+    font-size: .7em;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+.Filter_button{
+    width: 5vh;
+    font-family: 'Open Sans', sans-serif;
+}
+.error_filter{
+    font-size: 1vw;
+    color: red;
+}
+.Filter_radioButton{
+    font-size: 2vh;
+    text-align: left;
+}
+@media (max-width: 600px){
+    .Filter_radioButton{
+        font-size: 3vh;
+        text-align: left;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        margin-left: 20vw;
+    }
+    .Filter_closeClick{
+        display: none;
+    }
+}
