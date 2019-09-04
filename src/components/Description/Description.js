@@ -27,7 +27,7 @@ const Description = (props) => {
     <Container fluid className = "desc_container">
       <Row className="my-3 titles ">
           <Col className="m-0 p-0 desc_title" md={3} onClick = {()=> props.sort("nazwa")}>
-          <p ><strong className="text_desc">Nazwa obiektu</strong></p>
+          <div><strong className="text_desc">Nazwa obiektu</strong></div>
           </Col>
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("cena")}>
         <div><strong className="text_desc">Cena</strong></div>

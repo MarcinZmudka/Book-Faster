@@ -28,12 +28,6 @@ const HotelQuery = gql`
     }
   }
 `;
-/*    
-      accommodation_type
-      numberOfGueast
-      , accommodation_type: $accommodation_type, numberOfGueast: $numberOfGuest 
-      
-      */
 const QueryHotels = () => {
   const [clock] = useContext(ClockContext);
   let [{ name, place, interval, date, accommodation_type, numberOfGuest }] = useContext(SearchContext);

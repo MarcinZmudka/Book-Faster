@@ -16,8 +16,8 @@ const Filter = () => {
   const [interval, setInterval] = useState(0);
   const [place, setPlace] = useState("");
   const [error, setError] = useState("");
-  const [hotelData, setHotelData] = useState("");
   const [numberOfGuest, setNumberOfGuest] = useState("2");
+  const [accommodation_type, setAccommodation_type] = useState(0);
   const [, setSearchContext] = useContext(SearchContext);
   const updateName = event => {
     const name = event.target.value;
@@ -43,13 +43,13 @@ const Filter = () => {
     const interval = parseInt(event.target.value);
     setInterval(interval);
   };
-  const updateHotelData = event =>{
-    const value = event.target.value;
-    setHotelData(value);
-  } 
   const updateGuest = event => {
     const value = event.target.value;
     setNumberOfGuest(value);
+  }
+  const updateAccommodation = event => {
+    const value = parseInt(event.target.id);
+    setAccommodation_type(value);
   }
   const isDateFormEmpty = () => {
     if (day == "" && month == "" && year == "") {
@@ -77,7 +77,9 @@ const Filter = () => {
         name,
         place,
         interval,
-        date
+        date,
+        accommodation_type,
+        numberOfGuest
       });
     }
   };
@@ -94,7 +96,8 @@ const Filter = () => {
       place: "",
       interval: 0,
       date: `${clock.year}-${clock.month}-${clock.day}`,
-      hotelType: hotelData
+      accommodation_type: 0,
+      numberOfGuest: "",
     });
     document.getElementById("myForm").reset();
   };
@@ -113,7 +116,7 @@ const Filter = () => {
       <Form id="myForm" onSubmit={search}>
         <p className="error_filter">{error != "" ? error : null}</p>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label className="label">Nazwa obiektu</Form.Label>
+          <Form.Label className="Filter_label">Nazwa obiektu</Form.Label>
           <Form.Control
             type="text"
             placeholder="Nazwa obiektu"
@@ -121,12 +124,12 @@ const Filter = () => {
             onChange={updateName}
             value={name}
           />
-          <Form.Text className="underName">
+          <Form.Text className="Filter_underName">
             Tutaj wpisz nazwę obiektu, który chcesz wyszukać
           </Form.Text>
         </Form.Group>
         <Form.Group controlId="formBasicEmail1">
-          <Form.Label className="label">Nazwa miejscowości</Form.Label>
+          <Form.Label className="Filter_label">Nazwa miejscowości</Form.Label>
           <Form.Control
             type="text"
             placeholder="Nazwa miejscowości"
@@ -134,11 +137,11 @@ const Filter = () => {
             onChange={updatePlace}
             value={place}
           />
-          <Form.Text className="underName">
+          <Form.Text className="Filter_underName">
             Tutaj wpisz nazwę miejscowości
           </Form.Text>
         </Form.Group>
-        <Form.Label className="label">Data Przyjazdu</Form.Label>
+        <Form.Label className="Filter_label">Data Przyjazdu</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="exampleForm.ControlSelect1">
             <Form.Control as="select" onChange={updateDay} value={day}>
@@ -204,36 +207,30 @@ const Filter = () => {
           </Form.Group>
         </Form.Row>
         <Form.Group controlId="formBasicPassword">
-          <Form.Label className="label">Długość pobytu</Form.Label>
+          <Form.Label className="Filter_label">Długość pobytu</Form.Label>
           <Form.Control as="select" onChange={updateInterval}>
-            <option>1</option>
-            <option>2</option>
             <option>3</option>
-            <option>4</option>
             <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
           </Form.Control>
         </Form.Group>
         <Form.Group controlId="formBasicPassword">
-          <Form.Label className="label">Liczba Gości</Form.Label>
+          <Form.Label className="Filter_label">Liczba Gości</Form.Label>
           <Form.Control as="select" onChange={updateGuest}> value={numberOfGuest}
             <option>2</option>
             <option>4</option>
           </Form.Control>
         </Form.Group>
         <fieldset>
-        <Form.Label className="label">Typ obiektu</Form.Label>
+        <Form.Label className="Filter_label">Typ obiektu</Form.Label>
           <Form.Group as={Row}>
             <Col sm={6}>
               {[
-                ["Apartamenty", "201"],
-                ["Hotele", "204"],
-                ["Pensjonaty", "216"],
-                ["Pensjonaty B&B", "208"],
-                ["Hostele", "203"],
-                ["Domy Wakacyjne", "220"]
+                ["Apartamenty", 201],
+                ["Hotele", 204],
+                ["Pensjonaty", 216],
+                ["Pensjonaty B&B", 208],
+                ["Hostele", 203],
+                ["Domy Wakacyjne", 220]
               ].map(item => (
                 <Form.Check
                   className="Filter_radioButton"
@@ -241,17 +238,17 @@ const Filter = () => {
                   label={item[0]}
                   name="radioButton"
                   id={item[1]}
-                  onChange={updateHotelData}
+                  onChange={updateAccommodation}
                 />
               ))}
             </Col>
             <Col sm={6}>
               {[
-                ["Kwatery Prywatne", "222"],
-                ["Kempingi", "214"],
-                ["Motele", "205"],
-                ["Gospodarstwa Agroturystyczne", "210"],
-                ["Wille", "213"]
+                ["Kwatery Prywatne", 222],
+                ["Kempingi", 214],
+                ["Motele", 205],
+                ["Gospodarstwa Agroturystyczne", 210],
+                ["Wille", 213]
               ].map(item => (
                 <Form.Check
                   className="Filter_radioButton"
@@ -259,7 +256,7 @@ const Filter = () => {
                   label={item[0]}
                   name="radioButton"
                   id={item[1]}
-                  onChange={updateHotelData}
+                  onChange={updateAccommodation}
                 />
               ))}
             </Col>

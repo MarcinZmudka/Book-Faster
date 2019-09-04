@@ -36,7 +36,7 @@ class HotelList extends React.Component {
   changePage = (indexOfFirst, indexOfLast, currentPage) => {
     let newState = this.state;
     if (
-      indexOfFirst <= this.state.displayedHotels.length &&
+      indexOfFirst < this.state.displayedHotels.length &&
       indexOfFirst >= 0
     ) {
       newState.currentPage = currentPage;
