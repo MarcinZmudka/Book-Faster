@@ -100,7 +100,7 @@ const Register = props => {
 
   return (
         <div className = "login_background">
-          <p className="title">get Booked faster</p>
+          <span className="login_logo">BOOK FASTER</span>
           <p className="login_title">Zarejestruj się</p>
           <p className="error_login">{error ? error : ""}</p>
           <Form onSubmit={onSubmit} className="login_form">

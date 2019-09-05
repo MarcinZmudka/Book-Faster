@@ -55,7 +55,7 @@ const MainPage = () => {
             <div>
               <div className="text-stat">Wyszukuj według kryteriów</div>
               <div className="subText">
-                Wyszukuj po nazwie, miejscowości, dacie, długości pobytu.
+                Wyszukuj po nazwie, miejscowości, dacie, długości pobytu, ilości gości oraz typie obiektu.
               </div>
             </div>
           </Col>

@@ -11,7 +11,7 @@ const Navi = () => {
   const [userAuth] = useContext(UserAuthContext);
   return (
     <Navbar className="navbar" expand="lg">
-      <Navbar.Brand className="title">Book-Faster</Navbar.Brand>
+      <Navbar.Brand className="logo">BOOK FASTER</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
