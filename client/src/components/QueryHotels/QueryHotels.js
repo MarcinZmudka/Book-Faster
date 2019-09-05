@@ -6,7 +6,7 @@ import { UserHotelStatsContext } from "../../content/UserHotelStatsContext";
 import { HotelContext } from "../../content/HotelContext";
 import { UserAuthContext } from "../../content/UserAuthContext";
 import { ClockContext } from "../../content/ClockContext";
-
+//powinien generować dziecka typu hotel i user hotel
 const HotelQuery = gql`
   query Hotel(
     $name: String!
@@ -16,7 +16,14 @@ const HotelQuery = gql`
     $accommodation_type: Int!
     $numberOfGuest: String!
   ) {
-    hotel(name: $name, place: $place, arrival: $date, interval: $interval, accommodation_type: $accommodation_type, numberOfGuest: $numberOfGuest) {
+    hotel(
+      name: $name
+      place: $place
+      arrival: $date
+      interval: $interval
+      accommodation_type: $accommodation_type
+      numberOfGuest: $numberOfGuest
+    ) {
       name
       arrival
       depart
@@ -30,25 +37,53 @@ const HotelQuery = gql`
 `;
 const QueryHotels = () => {
   const [clock] = useContext(ClockContext);
-  let [{ name, place, interval, date, accommodation_type, numberOfGuest }] = useContext(SearchContext);
-  if(date === ""){
+  let [
+    { name, place, interval, date, accommodation_type, numberOfGuest }
+  ] = useContext(SearchContext);
+  console.log(
+    "query",
+    name,
+    place,
+    interval,
+    date,
+    accommodation_type,
+    numberOfGuest
+  );
+  if (date === "") {
     date = `${clock.year}-${clock.month}-${clock.day}`;
   }
   const [, setUserHotelStats] = useContext(UserHotelStatsContext);
   const [userAuth, , userInfo] = useContext(UserAuthContext);
-  const [, setHotel] = useContext(HotelContext);
+  const [hotel, setHotel] = useContext(HotelContext);
   const { loading, error, data } = useQuery(HotelQuery, {
-    variables: { name, place, date, interval, accommodation_type, numberOfGuest }
-  });
-
-  useEffect(() => {
-    if (userAuth) {
-      const displayHotels = findUser(data.hotel, userInfo.hotel, date != "");
-      setHotel(displayHotels[0]);
-      setUserHotelStats(displayHotels[1]);
+    variables: {
+      name,
+      place,
+      date,
+      interval,
+      accommodation_type,
+      numberOfGuest
     }
-  }, [name, place, interval, date, data, accommodation_type, numberOfGuest ]);
-
+  });
+  useEffect(() => {
+    const displayHotels = findUser(data.hotel, userInfo.hotel, date != "");
+    setHotel(displayHotels[0]);
+    setUserHotelStats(displayHotels[1]);
+  },[name, place, interval, date, accommodation_type, numberOfGuest]);
+  if (loading) {
+    return <div></div>;
+  }
+  console.log(
+    "query",
+    name,
+    place,
+    interval,
+    date,
+    accommodation_type,
+    numberOfGuest
+  );
+  
+  
   return <div></div>;
 };
 

@@ -6,19 +6,22 @@ import Row from "react-bootstrap/Row";
 import "./Filter.css";
 import { SearchContext } from "../../content/SearchContext";
 import { ClockContext } from "../../content/ClockContext";
+import { UserAuthContext } from "../../content/UserAuthContext";
 
 const Filter = () => {
   const [clock] = useContext(ClockContext);
+  const [, setSearchContext] = useContext(SearchContext);
+  const [,,userInfo,] = useContext(UserAuthContext);
   const [name, setName] = useState("");
   const [day, setDay] = useState(clock.day);
   const [month, setMonth] = useState(clock.month);
   const [year, setYear] = useState(clock.year);
   const [interval, setInterval] = useState(0);
-  const [place, setPlace] = useState("");
+  const [place, setPlace] = useState(userInfo.place);
   const [error, setError] = useState("");
   const [numberOfGuest, setNumberOfGuest] = useState("2");
   const [accommodation_type, setAccommodation_type] = useState(0);
-  const [, setSearchContext] = useContext(SearchContext);
+  
   const updateName = event => {
     const name = event.target.value;
     setName(name);
@@ -73,6 +76,12 @@ const Filter = () => {
     const date = day === "" ? "" : `${year}-${month}-${day}`;
     if (!isDateFormEmpty()) {
       setError("");
+      console.log("filter", name,
+      place,
+      interval,
+      date,
+      accommodation_type,
+      numberOfGuest);
       setSearchContext({
         name,
         place,
@@ -90,10 +99,10 @@ const Filter = () => {
     setMonth(clock.month);
     setYear(clock.year);
     setInterval(0);
-    setPlace("");
+    setPlace(userInfo.place);
     setSearchContext({
       name: "",
-      place: "",
+      place: userInfo.place,
       interval: 0,
       date: `${clock.year}-${clock.month}-${clock.day}`,
       accommodation_type: 0,

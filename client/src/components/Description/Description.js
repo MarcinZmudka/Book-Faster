@@ -18,7 +18,7 @@ const Description = (props) => {
     }else{
       return (
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("data wyjazdu")}>
-          <div><strong className="text_desc">Data wyjazdu</strong></div>
+          <p><strong className="text_desc">Data wyjazdu</strong></p>
         </Col>
       )
     }
@@ -27,20 +27,20 @@ const Description = (props) => {
     <Container fluid className = "desc_container">
       <Row className="my-3 titles ">
           <Col className="m-0 p-0 desc_title" md={3} onClick = {()=> props.sort("nazwa")}>
-          <div><strong className="text_desc">Nazwa obiektu</strong></div>
+          <p><strong className="text_desc">Nazwa obiektu</strong></p>
           </Col>
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("cena")}>
-        <div><strong className="text_desc">Cena</strong></div>
+        <p><strong className="text_desc">Cena</strong></p>
         </Col>
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("miejscowość")}>
-        <div ><strong className="text_desc">Miejscowość</strong></div>
+        <p ><strong className="text_desc">Miejscowość</strong></p>
         </Col>
         <Col className="m-0 p-0 desc_title" md={2} onClick = {()=> props.sort("data przyjazdu")}>
-        <div ><strong className="text_desc">Data przyjazdu</strong></div>
+        <p ><strong className="text_desc">Data przyjazdu</strong></p>
         </Col>
         {whatToShow()}
         <Col className="m-0 p-0 desc_title" md={1} onClick = {()=> props.sort("dni")}>
-        <div ><strong className="text_desc">Dni</strong></div>
+        <p ><strong className="text_desc">Dni</strong></p>
         </Col>
       </Row>
     </Container>

@@ -83,7 +83,6 @@ class HotelList extends React.Component {
               <UserHotel />
               <Jumbotron className="m-0 p-1 data_field">
                 <Description sort={this.sort} />
-                {console.log(this.state.displayedHotels)}
                 {this.state.displayedHotels.length > 0 ? (
                   this.state.displayedHotels
                     .slice(this.state.indexOfFirst, this.state.indexOfLast)

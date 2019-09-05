@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.67b85f07.chunk.css",
+    "main.js": "/static/js/main.fbdafd29.chunk.js",
+    "main.js.map": "/static/js/main.fbdafd29.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.25fef5a0.chunk.js": "/static/js/2.25fef5a0.chunk.js",
+    "static/js/2.25fef5a0.chunk.js.map": "/static/js/2.25fef5a0.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.5ea61305f1a28c5fd43555f56f90dc79.js": "/precache-manifest.5ea61305f1a28c5fd43555f56f90dc79.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.67b85f07.chunk.css.map": "/static/css/main.67b85f07.chunk.css.map",
+    "static/media/booking.png": "/static/media/booking.e8931ac3.png",
+    "static/media/dane1.png": "/static/media/dane1.2995c4fe.png",
+    "static/media/dane2.png": "/static/media/dane2.3fa6e1ef.png",
+    "static/media/wyszukiwarka.png": "/static/media/wyszukiwarka.29bdecf9.png"
+  }
+}

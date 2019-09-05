@@ -11,10 +11,10 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://App:ZEnF7ejqcpBxKTmV@bookfaster-bp5y5.mongodb.net/test?retryWrites=true&w=majority';
 
 // Database Name
-const dbName = 'Scraper';
+const dbName = 'test1';
 
 // Create a new MongoClient
 const client = new MongoClient(url);
@@ -33,7 +33,7 @@ client.connect(function(err) {
 });
 const findDocuments = function(db, callback) {
   // Get the documents collection
-  const collection = db.collection('hotels');
+  const collection = db.collection('test');
   // Find some documents
   collection.find({}).toArray(function(err, docs) {
     assert.equal(err, null);
@@ -75,7 +75,7 @@ const RootQuery = new GraphQLObjectType({
       },
       async resolve(parentValue, args) {
         const re = await Filter(args, allHotels);
-        console.log("resolve",re.length);
+        console.log("resolve", re.length);
         return re;
       }
     },

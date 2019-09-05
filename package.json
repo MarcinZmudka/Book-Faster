@@ -6,7 +6,8 @@
   "scripts": {
     "dev:server": "nodemon server.js",
     "json:server": "json-server -p 4001 --watch data.json",
-    "dev": "concurrently \"npm run json:server\" \"npm run dev:server\""
+    "dev": "concurrently \"npm run json:server\" \"npm run dev:server\"",
+    "BookFaster": "concurrently \"npm run dev:server\" \"cd client npm start\""
   },
   "author": "Me, but not me",
   "license": "MIT",
