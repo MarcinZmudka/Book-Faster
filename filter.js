@@ -1,6 +1,7 @@
 const Filter =  (args, allHotels) => {
   return new Promise((resolve, reject) => {
     let hotels = allHotels;
+    console.log(hotels === null);
     if (args.id != "" && args.id != undefined) {
       hotels =  hotels.filter(item => item.id === args.id);
     }

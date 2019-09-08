@@ -16,12 +16,13 @@ import NoHotel from "../NoHotel/NoHotel";
 class HotelList extends React.Component {
   constructor(props) {
     super(props);
-    const hotels = props.hotel;
+    const hotels = props.hotels;
+    const index = hotels.length < 10 ?  hotels.length : 10;
     this.state = {
       displayedHotels: hotels,
       currentPage: 1,
       indexOfFirst: 0,
-      indexOfLast: 10
+      indexOfLast: index
     };
   }
   setDisplayed = displayed => {
@@ -53,7 +54,7 @@ class HotelList extends React.Component {
   };
   componentDidUpdate(prevProps) {
     if (prevProps != this.props) {
-      const hotels = this.props.hotel;
+      const hotels = this.props.hotels;
       this.setState({
         displayedHotels: hotels,
         currentPage: 1,
@@ -80,9 +81,10 @@ class HotelList extends React.Component {
           </Col>
           <Col lg={9}>
             <div className="date_field_box">
-              <UserHotel />
+              <UserHotel userHotel ={this.props.userHotel}/>
               <Jumbotron className="m-0 p-1 data_field">
                 <Description sort={this.sort} />
+                {console.log("display", this.state.displayedHotels)}
                 {this.state.displayedHotels.length > 0 ? (
                   this.state.displayedHotels
                     .slice(this.state.indexOfFirst, this.state.indexOfLast)

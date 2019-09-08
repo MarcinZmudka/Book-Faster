@@ -3,7 +3,7 @@ import './Hotel.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { UserHotelStatsContext } from '../../content/UserHotelStatsContext';
+import { UserHotelStatsContext } from '../QueryHotels/QueryHotels';
 
 const Hotel = (props) => {
     const [ userHotelStats ] = useContext(UserHotelStatsContext);
@@ -24,6 +24,7 @@ const Hotel = (props) => {
             }
         }
     }
+
     return (
         <Container fluid className = "container_hotel">
             <Row className = "my-0 py-2 row_hotel">
@@ -37,5 +38,4 @@ const Hotel = (props) => {
         </Container>
     )
 }
-
 export default Hotel;

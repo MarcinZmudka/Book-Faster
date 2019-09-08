@@ -4,13 +4,13 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./Filter.css";
-import { SearchContext } from "../../content/SearchContext";
+import { searchContext } from "../QueryHotels/QueryHotels";
 import { ClockContext } from "../../content/ClockContext";
 import { UserAuthContext } from "../../content/UserAuthContext";
 
 const Filter = () => {
   const [clock] = useContext(ClockContext);
-  const [, setSearchContext] = useContext(SearchContext);
+  const [, setSearchContext] = useContext(searchContext);
   const [,,userInfo,] = useContext(UserAuthContext);
   const [name, setName] = useState("");
   const [day, setDay] = useState(clock.day);

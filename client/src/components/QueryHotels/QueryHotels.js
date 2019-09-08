@@ -1,12 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, createContext, useState } from "react";
 import { useQuery } from "react-apollo";
 import gql from "graphql-tag";
-import { SearchContext } from "../../content/SearchContext";
-import { UserHotelStatsContext } from "../../content/UserHotelStatsContext";
-import { HotelContext } from "../../content/HotelContext";
 import { UserAuthContext } from "../../content/UserAuthContext";
 import { ClockContext } from "../../content/ClockContext";
-//powinien generować dziecka typu hotel i user hotel
+import HotelList from "../HotelList/HotelList";
+
 const HotelQuery = gql`
   query Hotel(
     $name: String!
@@ -35,26 +33,28 @@ const HotelQuery = gql`
     }
   }
 `;
-const QueryHotels = () => {
+export const searchContext = createContext();
+export const UserHotelStatsContext = createContext();
+export const QueryHotels = () => {
   const [clock] = useContext(ClockContext);
-  let [
-    { name, place, interval, date, accommodation_type, numberOfGuest }
-  ] = useContext(SearchContext);
-  console.log(
-    "query",
+  const [search, setSearch] = useState({
+    name: "",
+    place: "",
+    interval: 0,
+    date: `${clock.year}-${clock.month}-${clock.day}`,
+    accommodation_type: 0,
+    numberOfGuest: ""
+  });
+  const {
     name,
     place,
-    interval,
     date,
+    interval,
     accommodation_type,
     numberOfGuest
-  );
-  if (date === "") {
-    date = `${clock.year}-${clock.month}-${clock.day}`;
-  }
-  const [, setUserHotelStats] = useContext(UserHotelStatsContext);
+  } = search;
+  console.log("search", [search]);
   const [userAuth, , userInfo] = useContext(UserAuthContext);
-  const [hotel, setHotel] = useContext(HotelContext);
   const { loading, error, data } = useQuery(HotelQuery, {
     variables: {
       name,
@@ -65,34 +65,31 @@ const QueryHotels = () => {
       numberOfGuest
     }
   });
-  useEffect(() => {
-    const displayHotels = findUser(data.hotel, userInfo.hotel, date != "");
-    setHotel(displayHotels[0]);
-    setUserHotelStats(displayHotels[1]);
-  },[name, place, interval, date, accommodation_type, numberOfGuest]);
   if (loading) {
-    return <div></div>;
+    return <div>loading</div>;
   }
-  console.log(
-    "query",
-    name,
-    place,
-    interval,
-    date,
-    accommodation_type,
-    numberOfGuest
-  );
-  
-  
+  if (error) {
+    console.log("Query Error", error);
+  }
+  if (data) {
+    const displayHotels = findUser(data.hotel, userInfo.hotel);
+    return (
+      <UserHotelStatsContext.Provider value={[displayHotels[1]]}>
+        <searchContext.Provider value={[search, setSearch]}>
+          <HotelList hotels={displayHotels[0]} userHotel={displayHotels[1]} />
+        </searchContext.Provider>
+      </UserHotelStatsContext.Provider>
+    );
+  }
   return <div></div>;
 };
 
-const findUser = (selected = [], user, date) => {
-  let displayUser = "";
-  let displayHotels = selected.filter(item => item.name.trim() !== user);
-  if (date) {
+const findUser = (selected, user) => {
+  let displayUser = [];
+  let displayHotels = [];
+  if (selected.length > 0) {
+    displayHotels = selected.filter(item => item.name.trim() !== user);
     displayUser = selected.filter(item => item.name.trim() === user);
   }
   return [displayHotels, displayUser];
 };
-export default QueryHotels;
