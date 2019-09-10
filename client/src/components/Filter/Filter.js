@@ -94,16 +94,17 @@ const Filter = () => {
   const clear = event => {
     event.preventDefault();
     setName("");
-    setDay(clock[2]);
-    setMonth(clock[1]);
-    setYear(clock[0]);
+    const time = JSON.parse(localStorage.getItem("time-bookfaster"));
+    setDay(time.day);
+    setMonth(time.month);
+    setYear(time.year);
     setInterval(0);
     setPlace(userInfo.place);
     setSearchData({
       name: "",
       place: userInfo.place,
       interval: 0,
-      date: `${clock[0]}-${clock[1]}-${clock[2]}`,
+      date: `${time.year}-${time.month}-${time.day}`,
       accommodation_type: 0,
       numberOfGuest: "",
     });
@@ -247,6 +248,7 @@ const Filter = () => {
                   name="radioButton"
                   id={item[1]}
                   onChange={updateAccommodation}
+                  key = {item[1]}
                 />
               ))}
             </Col>
@@ -265,6 +267,7 @@ const Filter = () => {
                   name="radioButton"
                   id={item[1]}
                   onChange={updateAccommodation}
+                  key = {item[1]}
                 />
               ))}
             </Col>
