@@ -2,7 +2,6 @@ import React, { useContext, createContext, useState } from "react";
 import { useQuery } from "react-apollo";
 import gql from "graphql-tag";
 import { UserAuthContext } from "../../content/UserAuthContext";
-import { ClockContext } from "../../content/ClockContext";
 import HotelList from "../HotelList/HotelList";
 
 const HotelQuery = gql`
@@ -36,7 +35,8 @@ const HotelQuery = gql`
 export const searchContext = createContext();
 export const UserHotelStatsContext = createContext();
 export const QueryHotels = () => {
-  const [clock] = useContext(ClockContext);
+  //const [clock] = useContext(ClockContext);
+  const clock = getTime();
   const [search, setSearch] = useState({
     name: "",
     place: "",
@@ -93,3 +93,9 @@ const findUser = (selected, user) => {
   }
   return [displayHotels, displayUser];
 };
+
+const getTime = () => {
+  let string = localStorage.getItem("time-bookfaster");
+  let object = JSON.parse(string);
+  return object;
+}

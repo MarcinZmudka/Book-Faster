@@ -14,7 +14,6 @@ import PasswordReset from "./components/Login/PasswordReset";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import { QueryHotels } from "./components/QueryHotels/QueryHotels";
-import { ClockProvider } from "./content/ClockContext";
 import ClockSetter from "./components/ClockSetter/ClockSetter";
 
 const client = new ApolloClient({
@@ -25,7 +24,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <ClockProvider>
           <ClockSetter />
           <UserAuthProvider>
             <Switch>
@@ -48,7 +46,6 @@ function App() {
               </Switch>
             </FirebaseProvider>
           </UserAuthProvider>
-        </ClockProvider>
       </Router>
     </div>
   );

@@ -5,22 +5,21 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./Filter.css";
 import { searchContext } from "../QueryHotels/QueryHotels";
-import { ClockContext } from "../../content/ClockContext";
 import { UserAuthContext } from "../../content/UserAuthContext";
 
 const Filter = () => {
-  const [clock] = useContext(ClockContext);
-  const [, setSearchContext] = useContext(searchContext);
+  const [searchData, setSearchData] = useContext(searchContext);
   const [,,userInfo,] = useContext(UserAuthContext);
-  const [name, setName] = useState("");
-  const [day, setDay] = useState(clock.day);
-  const [month, setMonth] = useState(clock.month);
-  const [year, setYear] = useState(clock.year);
-  const [interval, setInterval] = useState(0);
+  const [name, setName] = useState(searchData.name);
+  const clock = searchData.date.split("-");
+  const [day, setDay] = useState(clock[2]);
+  const [month, setMonth] = useState(clock[1]);
+  const [year, setYear] = useState(clock[0]);
+  const [interval, setInterval] = useState(searchData.interval);
   const [place, setPlace] = useState(userInfo.place);
   const [error, setError] = useState("");
-  const [numberOfGuest, setNumberOfGuest] = useState("2");
-  const [accommodation_type, setAccommodation_type] = useState(0);
+  const [numberOfGuest, setNumberOfGuest] = useState(searchData.numberOfGuest);
+  const [accommodation_type, setAccommodation_type] = useState(searchData.accommodation_type);
   
   const updateName = event => {
     const name = event.target.value;
@@ -82,7 +81,7 @@ const Filter = () => {
       date,
       accommodation_type,
       numberOfGuest);
-      setSearchContext({
+      setSearchData({
         name,
         place,
         interval,
@@ -95,16 +94,16 @@ const Filter = () => {
   const clear = event => {
     event.preventDefault();
     setName("");
-    setDay(clock.day);
-    setMonth(clock.month);
-    setYear(clock.year);
+    setDay(clock[2]);
+    setMonth(clock[1]);
+    setYear(clock[0]);
     setInterval(0);
     setPlace(userInfo.place);
-    setSearchContext({
+    setSearchData({
       name: "",
       place: userInfo.place,
       interval: 0,
-      date: `${clock.year}-${clock.month}-${clock.day}`,
+      date: `${clock[0]}-${clock[1]}-${clock[2]}`,
       accommodation_type: 0,
       numberOfGuest: "",
     });
@@ -217,14 +216,14 @@ const Filter = () => {
         </Form.Row>
         <Form.Group controlId="formBasicPassword">
           <Form.Label className="Filter_label">Długość pobytu</Form.Label>
-          <Form.Control as="select" onChange={updateInterval}>
+          <Form.Control as="select" onChange={updateInterval} value={interval}>
             <option>3</option>
             <option>5</option>
           </Form.Control>
         </Form.Group>
         <Form.Group controlId="formBasicPassword">
           <Form.Label className="Filter_label">Liczba Gości</Form.Label>
-          <Form.Control as="select" onChange={updateGuest}> value={numberOfGuest}
+          <Form.Control as="select" onChange={updateGuest} value={numberOfGuest}> 
             <option>2</option>
             <option>4</option>
           </Form.Control>

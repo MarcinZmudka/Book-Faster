@@ -24,7 +24,8 @@ const createDoc = (user) => {
         name: user.name,
         login: user.login,
         hotel: user.hotel,
-        place: user.place
+        place: user.place,
+        valid_date: JSON.stringify(user.valid_date),
     })
     .then(function() {
         user.setUserAuth(true); 
@@ -32,6 +33,7 @@ const createDoc = (user) => {
             name: user.name,
             hotel: user.hotel,
             place: user.place,
+            login: user.login
         });
         user.props_history.push("/compare");
     })
