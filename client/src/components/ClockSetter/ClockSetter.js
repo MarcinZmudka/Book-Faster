@@ -11,12 +11,11 @@ const ClockSetter = () => {
         const apiDate = new Date(res.data.currentDateTime);
         const clock = JSON.parse(localStorage.getItem("time-bookfaster"));
         if (
-          clock.year == apiDate.getFullYear() &&
-          clock.month == apiDate.getMonth() + 1 &&
-          clock.day == apiDate.getDate()
-        ){
-
-        }else{
+          clock.year === apiDate.getFullYear() &&
+          clock.month === apiDate.getMonth() + 1 &&
+          clock.day === apiDate.getDate()
+        ) {
+        } else {
           localStorage.setItem(
             "time-bookfaster",
             JSON.stringify({
@@ -26,6 +25,16 @@ const ClockSetter = () => {
             })
           );
         }
+      } else {
+        const apiDate = new Date(res.data.currentDateTime);
+        localStorage.setItem(
+          "time-bookfaster",
+          JSON.stringify({
+            year: apiDate.getFullYear(),
+            month: apiDate.getMonth() + 1,
+            day: apiDate.getDate()
+          })
+        );
       }
     });
   return <div></div>;

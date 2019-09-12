@@ -22,11 +22,11 @@ const LoginPage = props => {
     setPassword(value);
   };
   const loginPassEmpty = () => {
-    if(login == "" ){ 
+    if(login === "" ){ 
       setError("Email nie może być pusty");
       return true;
     }
-    if( password == ""){
+    if( password === ""){
       setError("Hasło nie może być puste")
       return true;
     }

@@ -8,7 +8,7 @@ import { UserHotelStatsContext } from '../QueryHotels/QueryHotels';
 const Hotel = (props) => {
     const [ userHotelStats ] = useContext(UserHotelStatsContext);
     const userHotelExist = () => userHotelStats.length > 0 ? true : false;
-    const whatToShow = () => userHotelExist() ? (props.value.price - userHotelStats[0].price) : props.value.depart;
+    const whatToShow = () => userHotelExist() ? (props.value.price - userHotelStats[0].price) : props.value.departure;
     const priceStyleBigger = {
         color: "red",
     }

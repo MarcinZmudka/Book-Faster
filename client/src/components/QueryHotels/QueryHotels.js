@@ -3,6 +3,7 @@ import { useQuery } from "react-apollo";
 import gql from "graphql-tag";
 import { UserAuthContext } from "../../content/UserAuthContext";
 import HotelList from "../HotelList/HotelList";
+import Loader from "../Loader/Loader";
 
 const HotelQuery = gql`
   query Hotel(
@@ -19,16 +20,17 @@ const HotelQuery = gql`
       arrival: $date
       interval: $interval
       accommodation_type: $accommodation_type
-      numberOfGuest: $numberOfGuest
+      number_of_guests: $numberOfGuest
     ) {
+      _id
       name
       arrival
-      depart
+      departure
       place
       price
       interval
       accommodation_type
-      numberOfGueast
+      number_of_guests
     }
   }
 `;
@@ -40,10 +42,10 @@ export const QueryHotels = () => {
   const [search, setSearch] = useState({
     name: "",
     place: "",
-    interval: 0,
+    interval: 3,
     date: `${clock.year}-${clock.month}-${clock.day}`,
     accommodation_type: 0,
-    numberOfGuest: ""
+    numberOfGuest: "2"
   });
   const {
     name,
@@ -53,8 +55,7 @@ export const QueryHotels = () => {
     accommodation_type,
     numberOfGuest
   } = search;
-  console.log("search", [search]);
-  const [userAuth, , userInfo] = useContext(UserAuthContext);
+  const [, , userInfo] = useContext(UserAuthContext);
   const { loading, error, data } = useQuery(HotelQuery, {
     variables: {
       name,
@@ -66,7 +67,7 @@ export const QueryHotels = () => {
     }
   });
   if (loading) {
-    return <div>loading</div>;
+    return <Loader/>;
   }
   if (error) {
     console.log("Query Error", error);

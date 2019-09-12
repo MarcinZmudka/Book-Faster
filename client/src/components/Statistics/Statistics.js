@@ -10,7 +10,7 @@ const Statistic = props => {
   const maxPrice = updateMaxPrice(props.hotels);
   const pricePerNight = updatePricePerNigth(props.hotels, averagePrice);
   const HideFilter = () => {
-    if (document.getElementById("Stats").style.display == "none") {
+    if (document.getElementById("Stats").style.display === "none") {
       document.getElementById("Stats").style.display = "block";
     } else {
       document.getElementById("Stats").style.display = "none";

@@ -1,9 +1,8 @@
 const Filter =  (args, allHotels) => {
   return new Promise((resolve, reject) => {
     let hotels = allHotels;
-    console.log(hotels === null);
     if (args.id != "" && args.id != undefined) {
-      hotels =  hotels.filter(item => item.id === args.id);
+      hotels =  hotels.filter(item => item._id === args.id);
     }
     if (args.name != "" && args.name != undefined ) {
       hotels = hotels.filter(item => {
@@ -22,18 +21,19 @@ const Filter =  (args, allHotels) => {
           return item.place.toUpperCase().trim().includes(args.place.toUpperCase().trim());
         })
     }
-    // if( args.numberOfGuest != "" && args.numberOgGuest != undefined){
-    //   hotels = hotels.filter(item => 
-    //     { 
-    //       return item.numberOfGuest.toUpperCase().trim() == args.numberOfGuest.toUpperCase().trim();
-    //     })
-    // }
-    // if( args.accommodation_type != 0 && args.accommodation_type != undefined){
-    //   hotels = hotels.filter(item => 
-    //     { 
-    //       return item.accommodation_type == args.accommodation_type.toUpperCase().trim();
-    //     })
-    // }
+    if( args.numberOfGuest != "" && args.numberOgGuest != undefined){
+      hotels = hotels.filter(item => 
+        { 
+          
+          return item.number_of_guests.toUpperCase().trim() == args.numberOfGuest.toUpperCase().trim();
+        })
+    }
+    if( args.accommodation_type != 0 && args.accommodation_type != undefined){
+      hotels = hotels.filter(item => 
+        { 
+          return item.accommodation_type == args.accommodation_type;
+        })
+    }
     resolve(hotels);
   })
   

@@ -54,18 +54,18 @@ const Filter = () => {
     setAccommodation_type(value);
   }
   const isDateFormEmpty = () => {
-    if (day == "" && month == "" && year == "") {
+    if (day === "" && month === "" && year === "") {
       return false;
     }
-    if (day == "") {
+    if (day === "") {
       setError("Podaj dzień");
       return true;
     }
-    if (month == "") {
+    if (month === "") {
       setError("Podaj miesiąc");
       return true;
     }
-    if (year == "") {
+    if (year === "") {
       setError("Podaj rok");
       return true;
     }
@@ -75,12 +75,6 @@ const Filter = () => {
     const date = day === "" ? "" : `${year}-${month}-${day}`;
     if (!isDateFormEmpty()) {
       setError("");
-      console.log("filter", name,
-      place,
-      interval,
-      date,
-      accommodation_type,
-      numberOfGuest);
       setSearchData({
         name,
         place,
@@ -98,20 +92,20 @@ const Filter = () => {
     setDay(time.day);
     setMonth(time.month);
     setYear(time.year);
-    setInterval(0);
+    setInterval(3);
     setPlace(userInfo.place);
     setSearchData({
       name: "",
       place: userInfo.place,
-      interval: 0,
+      interval: 3,
       date: `${time.year}-${time.month}-${time.day}`,
       accommodation_type: 0,
-      numberOfGuest: "",
+      numberOfGuest: "2",
     });
     document.getElementById("myForm").reset();
   };
   const HideFilter = (event) => {
-    if(document.getElementById("myForm").style.display == "none"){
+    if(document.getElementById("myForm").style.display === "none"){
       document.getElementById("myForm").style.display = "block";
     }else{
       document.getElementById("myForm").style.display = "none";
@@ -123,7 +117,7 @@ const Filter = () => {
         <i className="far fa-caret-square-right Filter_close"></i>
       </button>
       <Form id="myForm" onSubmit={search}>
-        <p className="error_filter">{error != "" ? error : null}</p>
+        <p className="error_filter">{error !== "" ? error : null}</p>
         <Form.Group controlId="formBasicEmail">
           <Form.Label className="Filter_label">Nazwa obiektu</Form.Label>
           <Form.Control
@@ -218,14 +212,16 @@ const Filter = () => {
         <Form.Group controlId="formBasicPassword">
           <Form.Label className="Filter_label">Długość pobytu</Form.Label>
           <Form.Control as="select" onChange={updateInterval} value={interval}>
-            <option>3</option>
+            <option>Wybierz długość pobytu</option>
+            <option >3</option>
             <option>5</option>
           </Form.Control>
         </Form.Group>
         <Form.Group controlId="formBasicPassword">
           <Form.Label className="Filter_label">Liczba Gości</Form.Label>
           <Form.Control as="select" onChange={updateGuest} value={numberOfGuest}> 
-            <option>2</option>
+            <option >Wybierz ilość gości</option>
+            <option >2</option>
             <option>4</option>
           </Form.Control>
         </Form.Group>
@@ -249,6 +245,7 @@ const Filter = () => {
                   id={item[1]}
                   onChange={updateAccommodation}
                   key = {item[1]}
+                  checked = {accommodation_type === item[1] ? "checked" : ""}
                 />
               ))}
             </Col>
@@ -268,6 +265,7 @@ const Filter = () => {
                   id={item[1]}
                   onChange={updateAccommodation}
                   key = {item[1]}
+                  checked = {accommodation_type === item[1] ? "checked" : ""}
                 />
               ))}
             </Col>

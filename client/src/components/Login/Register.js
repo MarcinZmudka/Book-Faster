@@ -43,31 +43,31 @@ const Register = props => {
     setPlace(value);
   };
   const typedDataIncorrect = () => {
-    if(password1 == ""){
+    if(password1 === ""){
       setError("Hasło nie może być puste");
       return true;
     }
-    if(password2 == ""){
+    if(password2 === ""){
       setError("Hasło nie może być puste");
       return true;
     }
-    if(password1 != password2){
+    if(password1 !== password2){
       setError("Podane hasło różnią się");
       return true;
     }
-    if(login == "" ){ 
+    if(login === "" ){ 
       setError("Email nie może być pusty");
       return true;
     }
-    if(hotel == "" ){ 
+    if(hotel === "" ){ 
       setError("Hotel nie może być pusty");
       return true;
     }
-    if(place == ""){
+    if(place === ""){
       setError("Miejscowość nie może być puste")
       return true;
     }
-    if(name == ""){
+    if(name === ""){
       setError("Imię nie może być puste")
       return true;
     }

@@ -7,54 +7,71 @@ const {
   GraphQLNonNull
 } = require("graphql");
 const Filter = require("./filter");
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
+const mongo = require("mongodb");
+const assert = require("assert");
 
 // Connection URL
-//const url = 'mongodb+srv://App:ZEnF7ejqcpBxKTmV@bookfaster-bp5y5.mongodb.net/test?retryWrites=true&w=majority';
-const url = "mongodb://localhost:27017";
-
+const url =
+  "mongodb+srv://App:ZEnF7ejqcpBxKTmV@bookfaster-bp5y5.mongodb.net/test?retryWrites=true&w=majority";
+//const url = "mongodb://localhost:27017";
+let allHotels = [];
 // Database Name
-const dbName = 'Scraper'; 
-
+const dbName = "BookFaster";
 // Create a new MongoClient
-const client = new MongoClient(url);
-let allHotels = null;
-// Use connect method to connect to the Server
-client.connect(function(err) { // trzeba dodać to do promise
-  assert.equal(null, err);
-  console.log("Connected successfully to server");
+const connectToDatabase = () =>
+  new Promise((resolve, reject) => {
+    if (allHotels.length > 0) {
+      console.log("jestem");
+      resolve(allHotels);
+    }
+    else{
+      mongo.MongoClient.connect(
+        "mongodb+srv://Marcin:TrolvMongodb6$@bookfaster-bp5y5.mongodb.net/test?retryWrites=true&w=majority",
+        {
+          useNewUrlParser: true,
+          useUnifiedTopology: true
+        },
+        (err, client) => {
+          if (err) {
+            console.error(err);
+            return;
+          }
+          console.log("Connected successfully to server");
+          const db = client.db("BookFaster");
+          findDocuments(db, docs => {
+            client.close();
+            allHotels = docs;
+            resolve(docs);
+          });
+        }
+      );
+    }
 
-  const db = client.db(dbName);
-  findDocuments(db, (docs) => {
-    allHotels = docs;
-    client.close();
   });
-  
-});
+
 const findDocuments = function(db, callback) {
   // Get the documents collection
-  const collection = db.collection('hotels');
+  const collection = db.collection("hotels");
   // Find some documents
   collection.find({}).toArray(function(err, docs) {
     assert.equal(err, null);
     callback(docs);
   });
-}
+};
 
 //Customer Type
 const HotelType = new GraphQLObjectType({
   name: "Hotel",
   fields: () => ({
-    id: { type: GraphQLInt },
+    _id: { type: GraphQLString },
     name: { type: GraphQLString },
     arrival: { type: GraphQLString },
-    depart: { type: GraphQLString },
+    departure: { type: GraphQLString },
     interval: { type: GraphQLInt },
     place: { type: GraphQLString },
     price: { type: GraphQLInt },
     accommodation_type: { type: GraphQLInt },
-    numberOfGueast: { type: GraphQLString }
+    number_of_guests: { type: GraphQLString }
   })
 });
 
@@ -65,17 +82,17 @@ const RootQuery = new GraphQLObjectType({
     hotel: {
       type: new GraphQLList(HotelType),
       args: {
-        id: { type: GraphQLString },
+        _id: { type: GraphQLString },
         name: { type: GraphQLString },
         arrival: { type: GraphQLString },
-        depart: { type: GraphQLString },
+        //departure: { type: GraphQLString },
         interval: { type: GraphQLInt },
         place: { type: GraphQLString },
-        accommodation_type: {type: GraphQLInt},
-        numberOfGuest: {type: GraphQLString},
+        accommodation_type: { type: GraphQLInt },
+        number_of_guests: { type: GraphQLString }
       },
       async resolve(parentValue, args) {
-        const re = await Filter(args, allHotels);
+        const re = await Filter(args, await connectToDatabase());
         return re;
       }
     },
@@ -130,6 +147,6 @@ const RootQuery = new GraphQLObjectType({
 //   }
 // })
 module.exports = new GraphQLSchema({
-  query: RootQuery,
+  query: RootQuery
   // mutation
 });
