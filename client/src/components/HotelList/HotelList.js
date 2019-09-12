@@ -53,7 +53,7 @@ class HotelList extends React.Component {
     this.setState(displayed);
   };
   componentDidUpdate(prevProps) {
-    if (prevProps != this.props) {
+    if (prevProps !== this.props) {
       const hotels = this.props.hotels;
       this.setState({
         displayedHotels: hotels,
@@ -84,12 +84,11 @@ class HotelList extends React.Component {
               <UserHotel userHotel ={this.props.userHotel}/>
               <Jumbotron className="m-0 p-1 data_field">
                 <Description sort={this.sort} />
-                {console.log("display", this.state.displayedHotels)}
                 {this.state.displayedHotels.length > 0 ? (
                   this.state.displayedHotels
                     .slice(this.state.indexOfFirst, this.state.indexOfLast)
                     .map(item => {
-                      return <Hotel value={item} key={item.id} />;
+                      return <Hotel value={item} key={item._id} />;
                     })
                 ) : (
                   <NoHotel />

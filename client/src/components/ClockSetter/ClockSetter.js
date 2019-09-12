@@ -1,21 +1,40 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import axios from "axios";
-import { ClockContext } from "../../content/ClockContext";
 
 const ClockSetter = () => {
-  const [clock, setClock] = useContext(ClockContext);
   axios
     .get(
       `https://cors-anywhere.herokuapp.com/http://worldclockapi.com/api/json/cet/now?callback=mycallback`
     )
     .then(res => {
-      if (clock === "") {
+      if (localStorage.getItem("time-bookfaster") !== null) {
         const apiDate = new Date(res.data.currentDateTime);
-        setClock({
-          year: apiDate.getFullYear(),
-          month: apiDate.getMonth() + 1,
-          day: apiDate.getDate()
-        });
+        const clock = JSON.parse(localStorage.getItem("time-bookfaster"));
+        if (
+          clock.year === apiDate.getFullYear() &&
+          clock.month === apiDate.getMonth() + 1 &&
+          clock.day === apiDate.getDate()
+        ) {
+        } else {
+          localStorage.setItem(
+            "time-bookfaster",
+            JSON.stringify({
+              year: apiDate.getFullYear(),
+              month: apiDate.getMonth() + 1,
+              day: apiDate.getDate()
+            })
+          );
+        }
+      } else {
+        const apiDate = new Date(res.data.currentDateTime);
+        localStorage.setItem(
+          "time-bookfaster",
+          JSON.stringify({
+            year: apiDate.getFullYear(),
+            month: apiDate.getMonth() + 1,
+            day: apiDate.getDate()
+          })
+        );
       }
     });
   return <div></div>;
