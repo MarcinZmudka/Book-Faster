@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.368cb160.chunk.css",
+    "main.css": "/static/css/main.f97f1902.chunk.css",
     "main.js": "/static/js/main.bd0873d7.chunk.js",
     "main.js.map": "/static/js/main.bd0873d7.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
@@ -8,9 +8,9 @@
     "static/js/2.a67ce1e3.chunk.js": "/static/js/2.a67ce1e3.chunk.js",
     "static/js/2.a67ce1e3.chunk.js.map": "/static/js/2.a67ce1e3.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.baf4013a61c68984d4eb9dabd8922fdc.js": "/precache-manifest.baf4013a61c68984d4eb9dabd8922fdc.js",
+    "precache-manifest.1c3acb70ab6794f12dee4778bbf7e45a.js": "/precache-manifest.1c3acb70ab6794f12dee4778bbf7e45a.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.368cb160.chunk.css.map": "/static/css/main.368cb160.chunk.css.map",
+    "static/css/main.f97f1902.chunk.css.map": "/static/css/main.f97f1902.chunk.css.map",
     "static/media/booking.png": "/static/media/booking.e8931ac3.png",
     "static/media/dane1.png": "/static/media/dane1.fa5fd8ea.png",
     "static/media/dane2.png": "/static/media/dane2.1e7759fc.png",

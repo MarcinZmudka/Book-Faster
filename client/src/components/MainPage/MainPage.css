@@ -83,6 +83,7 @@
 }
 .mainpage_photo {
   margin: 4vh 0 1vh 0;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   border: 1px solid black;
