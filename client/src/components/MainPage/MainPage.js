@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import dane2 from "../images/dane-mini.png";
 import dane1 from "../images/dane-maxi.png";
 import wyszukiwarka from "../images/wyszukiwarka.png";
-import statystyki from "../images/statystyki.png";
+import statystyki from "../images/Statystyki.png";
 import booking from "../images/booking.png";
 
 const MainPage = () => {
