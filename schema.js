@@ -12,9 +12,9 @@ const assert = require("assert");
 
 // Connection URL
 
-const url =
+/*const url =
   "mongodb+srv://App:ZEnF7ejqcpBxKTmV@bookfaster-bp5y5.mongodb.net/test?retryWrites=true&w=majority";
-//const url = "mongodb://localhost:27017";
+*/const url = "mongodb://localhost:27017";
 let allHotels = [];
 
 // Database Name
@@ -28,7 +28,7 @@ const connectToDatabase = () =>
     }
     else{
       mongo.MongoClient.connect(
-        "mongodb+srv://Marcin:TrolvMongodb6$@bookfaster-bp5y5.mongodb.net/test?retryWrites=true&w=majority",
+        url,
         {
           useNewUrlParser: true,
           useUnifiedTopology: true
@@ -39,7 +39,7 @@ const connectToDatabase = () =>
             return;
           }
           console.log("Connected successfully to server");
-          const db = client.db("BookFaster");
+          const db = client.db("Scraper");
           findDocuments(db, docs => {
             client.close();
             allHotels = docs;

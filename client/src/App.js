@@ -17,7 +17,7 @@ import { QueryHotels } from "./components/QueryHotels/QueryHotels";
 import ClockSetter from "./components/ClockSetter/ClockSetter";
 
 const client = new ApolloClient({
-  uri: `/graphql`
+  uri: `http://localhost:4000/graphql`
 });
 
 function App() {

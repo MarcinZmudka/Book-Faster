@@ -35,6 +35,12 @@ const Hotel = (props) => {
                 <Col className = "hotel_column" style = { whatStyle()} md={2}>{whatToShow()}</Col>
                 <Col className = "hotel_column" md={1}>{props.value.interval ? props.value.interval : 3}</Col>
             </Row>
+            <Row className = "my-0 py-2 row_hidden_hotel">
+                <Col className = "hotel_column" md={3}>Cena za dobę: </Col>
+                <Col className = "hotel_column" md={2}>{Math.round(props.value.price/props.value.interval)}</Col>
+                <Col className = "hotel_column" md={2}>Twoja cena za dobę: </Col>
+                <Col className = "hotel_column" md={2}>{userHotelExist() ? Math.round(userHotelStats[0].price/props.value.interval) : "Nie jesteś dostępny w podanym terminie"}</Col>
+            </Row>
         </Container>
     )
 }
