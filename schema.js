@@ -39,7 +39,7 @@ const connectToDatabase = () =>
             return;
           }
           console.log("Connected successfully to server");
-          const db = client.db("Scraper");
+          const db = client.db(dbName);
           findDocuments(db, docs => {
             client.close();
             allHotels = docs;
