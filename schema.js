@@ -12,9 +12,9 @@ const assert = require("assert");
 
 // Connection URL
 
-/*const url =
+const url =
   "mongodb+srv://App:ZEnF7ejqcpBxKTmV@bookfaster-bp5y5.mongodb.net/test?retryWrites=true&w=majority";
-*/const url = "mongodb://localhost:27017";
+//const url = "mongodb://localhost:27017";
 let allHotels = [];
 
 // Database Name
