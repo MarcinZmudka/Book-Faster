@@ -21,7 +21,7 @@ I used real booking data from Booking API.
 Clone repo and in the command shell write:
 
 ```bash
-npm i && npm start
+npm i && npm run dev
 ```
 
 ## Tech Stack
